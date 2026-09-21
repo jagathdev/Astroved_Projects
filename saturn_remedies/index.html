@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Saturn Remedies | AstroVed</title>
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-navy: #071A33;
+            --color-royal: #123B8C;
+            --color-gold: #F5A623;
+            --color-green: #059669;
+            --color-cream: #F8FAFC;
+            --color-text-main: #1E293B;
+            --color-text-muted: #475569;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+
+            --animate-blob: blob 7s infinite;
+            --animate-blob-delayed: blob 7s infinite 2s;
+            --animate-blob-delayed-more: blob 7s infinite 4s;
+
+            @keyframes blob {
+                0% { transform: translate(0px, 0px) scale(1); }
+                33% { transform: translate(30px, -50px) scale(1.1); }
+                66% { transform: translate(-20px, 20px) scale(0.9); }
+                100% { transform: translate(0px, 0px) scale(1); }
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- HERO SECTION (Split Layout) -->
+    <section class="relative w-full grid grid-cols-1 md:grid-cols-2 bg-[#39245C]">
+
+        <!-- Image (First on Mobile, Left side on Desktop) -->
+        <div class="relative min-h-[350px] md:min-h-0 h-full w-full md:col-start-1 md:row-start-1">
+            <div class="absolute inset-0 bg-[url('assets/images/hero/hero_devotional.jpg')] bg-cover bg-center"></div>
+
+            <!-- Magical fiery glow border on desktop (on the right edge of the image) -->
+            <div
+                class="hidden md:block absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-r from-transparent to-[#39245C] z-10 pointer-events-none">
+            </div>
+            <div
+                class="hidden md:block absolute right-0 top-0 bottom-0 w-4 shadow-[10px_0_20px_rgba(88,28,135,0.4)] z-10 pointer-events-none">
+            </div>
+        </div>
+
+        <!-- Right Content Wrapper (Premium Aesthetic) -->
+        <div
+            class="flex flex-col justify-center px-6 py-10 md:px-8 lg:px-12 xl:px-16 md:py-8 z-20 md:col-start-2 md:row-start-1 relative w-full overflow-hidden md:overflow-visible">
+
+            <!-- Animated Background Elements for Right Side -->
+            <div class="hidden md:block absolute inset-0 overflow-hidden pointer-events-none z-0">
+                <div
+                    class="absolute top-10 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-screen filter blur-[90px] opacity-20 animate-blob">
+                </div>
+                <div
+                    class="absolute bottom-20 left-20 w-80 h-80 bg-indigo-500 rounded-full mix-blend-screen filter blur-[90px] opacity-15 animate-blob-delayed">
+                </div>
+                <div
+                    class="absolute top-40 left-40 w-64 h-64 bg-fuchsia-600 rounded-full mix-blend-screen filter blur-[90px] opacity-20 animate-blob-delayed-more">
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center h-full max-w-xl mx-auto md:mx-0 w-full relative z-20">
+
+                <!-- Tag -->
+                <div
+                    class="inline-flex items-center space-x-2 bg-emerald-900/40 border border-emerald-500/40 text-emerald-100 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 sm:mb-6 w-max shadow-[0_0_15px_rgba(16,185,129,0.2)] animate-on-scroll fade-up backdrop-blur-md">
+                    <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Looking For</span>
+                </div>
+
+                <!-- Title (Single Line on tablet+) -->
+                <h1 id="hero-title"
+                    class="font-serif text-[32px] md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-3 sm:mb-4 leading-tight animate-on-scroll fade-up delay-100 md:whitespace-nowrap tracking-tight min-w-0">
+                    Saturn <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-fuchsia-200 drop-shadow-[0_0_10px_rgba(216,180,254,0.3)]">Remedies?</span>
+                </h1>
+
+                <!-- Description -->
+                <p id="hero-desc"
+                    class="text-purple-50 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base lg:text-lg animate-on-scroll fade-up delay-200 font-light opacity-90">
+                    Overcome challenges in career, finances, relationships, and health during Sade Sati or Shani Dasha
+                    with authentic Vedic rituals.
+                </p>
+
+                <!-- Modern 3 Steps Timeline -->
+                <div
+                    class="flex items-center justify-between mb-8 sm:mb-10 w-full max-w-[400px] relative animate-on-scroll fade-up delay-300">
+                    <!-- Connecting Line -->
+                    <div
+                        class="absolute top-5 sm:top-6 left-8 right-8 h-0.5 bg-gradient-to-r from-emerald-400/40 via-green-400/60 to-teal-400/40 z-0">
+                    </div>
+
+                    <!-- Step 1: Issue -->
+                    <div class="flex flex-col items-center relative z-10 w-[70px] sm:w-20 group">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-900/40 shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center justify-center border border-emerald-400/40 mb-2 transition-transform group-hover:-translate-y-1 backdrop-blur-sm">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[9px] sm:text-[10px] lg:text-xs font-medium text-emerald-100 text-center leading-tight">Stress
+                            &<br>Worries</span>
+                    </div>
+
+                    <!-- Step 2: Solution -->
+                    <div class="flex flex-col items-center relative z-10 w-[70px] sm:w-20 group">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 shadow-[0_0_20px_rgba(16,185,129,0.3)] flex items-center justify-center border-[2px] sm:border-[3px] border-emerald-900/50 mb-2 transition-transform group-hover:-translate-y-1">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[9px] sm:text-[10px] lg:text-xs font-bold text-emerald-200 text-center leading-tight">Saturn<br>Ritual</span>
+                    </div>
+
+                    <!-- Step 3: Result -->
+                    <div class="flex flex-col items-center relative z-10 w-[70px] sm:w-20 group">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-900/40 shadow-[0_4px_15px_rgba(0,0,0,0.3)] flex items-center justify-center border border-teal-400/40 mb-2 transition-transform group-hover:-translate-y-1 backdrop-blur-sm">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-teal-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span
+                            class="text-[9px] sm:text-[10px] lg:text-xs font-medium text-emerald-100 text-center leading-tight">Renewed<br>Peace</span>
+                    </div>
+                </div>
+
+                <!-- CTA Area -->
+                <div
+                    class="flex flex-col sm:flex-row items-center sm:justify-start gap-4 sm:gap-6 md:gap-3 lg:gap-8 animate-on-scroll fade-up delay-400">
+
+                    <div
+                        class="flex flex-row sm:flex-col items-baseline sm:items-start justify-center sm:justify-start gap-2 sm:gap-0 shrink-0">
+                        <span
+                            class="text-[10px] md:text-xs uppercase tracking-widest text-purple-300 font-bold opacity-70 sm:mb-0.5">Starting
+                            from</span>
+                        <span class="text-white font-black text-2xl md:text-[26px] lg:text-3xl leading-none">₹108</span>
+                    </div>
+
+                    <a href="#remedies"
+                        class="relative group inline-flex items-center justify-center w-full sm:w-auto shrink-0">
+                        <!-- Glow effect -->
+                        <div
+                            class="absolute -inset-1 bg-green rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500">
+                        </div>
+                        <!-- Button -->
+                        <button
+                            class="relative bg-green hover:bg-[#047857] text-white font-bold py-3 px-5 md:py-2.5 md:px-5 lg:py-4 lg:px-8 rounded-full shadow-xl transition-all text-sm md:text-[13px] lg:text-lg flex items-center justify-center w-full sm:w-auto whitespace-nowrap cursor-pointer">
+                            <span>Explore Remedies</span>
+                            <svg class="w-4 h-4 md:w-3.5 md:h-3.5 lg:w-5 lg:h-5 ml-1.5 lg:ml-2 transform group-hover:translate-x-1.5 transition-transform shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARE YOU FACING THESE PROBLEMS? -->
+    <section class="py-16 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-7xl relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <span class="text-green uppercase tracking-widest text-sm font-bold mb-3 block">Common Challenges</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-royal mb-4">
+                    Are You Facing These Problems?
+                </h2>
+                <div class="w-24 h-1 bg-green mx-auto my-3 rounded-full"></div>
+            </div>
+
+            <!-- 5 Cards Grid / Mobile Carousel -->
+            <div id="problems-carousel" class="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pb-4 sm:pb-0 snap-x snap-mandatory sm:snap-none"
+                style="scrollbar-width: none;">
+
+                <!-- Card 1: Career -->
+                <div
+                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-purple-200 overflow-hidden group animate-on-scroll fade-up delay-100 flex flex-col hover:scale-[1.03] hover:shadow-lg transition-all duration-500 ease-out">
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative overflow-hidden bg-purple-50 m-1 rounded-[12px]">
+                        <img src="assets/images/effects/career_v2.jpg" alt="Career Setbacks"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div
+                            class="absolute inset-0 bg-purple-900/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Icon -->
+                    <div class="relative flex justify-center -mt-6 z-10">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-[3px] border-white shadow-sm text-purple-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="p-5 pt-3 text-center flex-grow">
+                        <h3 class="font-bold text-royal mb-2 text-[15px]">Career Setbacks</h3>
+                        <p class="text-[13px] text-gray-600 leading-relaxed">Struggles in career growth, sudden job
+                            loss, or workplace politics.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Finance -->
+                <div
+                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-purple-200 overflow-hidden group animate-on-scroll fade-up delay-200 flex flex-col hover:scale-[1.03] hover:shadow-lg transition-all duration-500 ease-out">
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative overflow-hidden bg-purple-50 m-1 rounded-[12px]">
+                        <img src="assets/images/effects/finance_v2.jpg" alt="Financial Hardship"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div
+                            class="absolute inset-0 bg-purple-900/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Icon -->
+                    <div class="relative flex justify-center -mt-6 z-10">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-[3px] border-white shadow-sm text-purple-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="p-5 pt-3 text-center flex-grow">
+                        <h3 class="font-bold text-royal mb-2 text-[15px]">Financial Hardship</h3>
+                        <p class="text-[13px] text-gray-600 leading-relaxed">Mounting debts, unexpected heavy expenses,
+                            and blocked wealth.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Health -->
+                <div
+                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-purple-200 overflow-hidden group animate-on-scroll fade-up delay-300 flex flex-col hover:scale-[1.03] hover:shadow-lg transition-all duration-500 ease-out">
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative overflow-hidden bg-purple-50 m-1 rounded-[12px]">
+                        <img src="assets/images/effects/health_v2.jpg" alt="Health Issues"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div
+                            class="absolute inset-0 bg-purple-900/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Icon -->
+                    <div class="relative flex justify-center -mt-6 z-10">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-[3px] border-white shadow-sm text-purple-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="p-5 pt-3 text-center flex-grow">
+                        <h3 class="font-bold text-royal mb-2 text-[15px]">Health & Vitality</h3>
+                        <p class="text-[13px] text-gray-600 leading-relaxed">Chronic illnesses, joint pain, extreme
+                            fatigue, or lingering health issues.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Relationships -->
+                <div
+                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-purple-200 overflow-hidden group animate-on-scroll fade-up delay-400 flex flex-col hover:scale-[1.03] hover:shadow-lg transition-all duration-500 ease-out">
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative overflow-hidden bg-purple-50 m-1 rounded-[12px]">
+                        <img src="assets/images/effects/relationship_v2.jpg" alt="Relationship Strain"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div
+                            class="absolute inset-0 bg-purple-900/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Icon -->
+                    <div class="relative flex justify-center -mt-6 z-10">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-[3px] border-white shadow-sm text-purple-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="p-5 pt-3 text-center flex-grow">
+                        <h3 class="font-bold text-royal mb-2 text-[15px]">Relationship Strain</h3>
+                        <p class="text-[13px] text-gray-600 leading-relaxed">Misunderstandings, conflicts, and lack of
+                            harmony with loved ones.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Mental -->
+                <div
+                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-purple-200 overflow-hidden group animate-on-scroll fade-up delay-500 flex flex-col hover:scale-[1.03] hover:shadow-lg transition-all duration-500 ease-out">
+                    <!-- Image -->
+                    <div class="aspect-square w-full relative overflow-hidden bg-purple-50 m-1 rounded-[12px]">
+                        <img src="assets/images/effects/mental_new.jpg" alt="Mental Anxiety"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                        <div
+                            class="absolute inset-0 bg-purple-900/10 group-hover:bg-transparent transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Icon -->
+                    <div class="relative flex justify-center -mt-6 z-10">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center border-[3px] border-white shadow-sm text-purple-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Text -->
+                    <div class="p-5 pt-3 text-center flex-grow">
+                        <h3 class="font-bold text-royal mb-2 text-[15px]">Mental Anxiety</h3>
+                        <p class="text-[13px] text-gray-600 leading-relaxed">Constant worry, depression, fear of the
+                            unknown, and loss of peace.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW SATURN'S IMPACT CAN BE REDUCED -->
+    <section class="py-10 lg:py-10 bg-purple-100 relative overflow-hidden">
+        <!-- Decorative bg -->
+        <div
+            class="absolute top-0 right-0 w-80 h-80 bg-purple-100 rounded-full mix-blend-multiply filter blur-[80px] opacity-40 pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-80 h-80 bg-indigo-200 rounded-full mix-blend-multiply filter blur-[80px] opacity-40 pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+
+            <!-- Mobile Only: Title & 1st Para -->
+            <div class="md:hidden text-center mb-8 animate-on-scroll fade-up">
+                <h2 class="font-serif text-3xl font-bold text-[#3D2C5A] mb-4 leading-tight">
+                    How Saturn's Impact Can Be Reduced
+                </h2>
+                <p class="text-gray-700 opacity-90 leading-relaxed text-sm">
+                    In Vedic astrology, periods like Sade Sati, Shani Dasha and other Saturn transits are a part of your
+                    life's journey.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+                <!-- Left: Styled Image (Order 2 on Mobile, Order 1 on Desktop) -->
+                <div class="relative animate-on-scroll fade-up order-2 md:order-1">
+                    <!-- Offset background decorative block -->
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-tr from-purple-200 to-indigo-100 rounded-2xl transform rotate-3 opacity-60 pointer-events-none">
+                    </div>
+                    <div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                        <img src="assets/images/remedies/remedy_daily.jpg" alt="Diya lamp"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <!-- Right: Content & Card (Order 3 on Mobile, Order 2 on Desktop) -->
+                <div class="animate-on-scroll fade-up delay-100 order-3 md:order-2 mt-2 lg:mt-0">
+
+                    <!-- Desktop Only: Title -->
+                    <h2
+                        class="hidden md:block font-serif text-3xl md:text-4xl font-bold text-[#3D2C5A] mb-6 leading-tight">
+                        How Saturn's Impact<br class="hidden md:block"> Can Be Reduced
+                    </h2>
+
+                    <div class="space-y-4 text-gray-700 mb-8 opacity-90">
+                        <!-- Desktop Only: 1st Para -->
+                        <p class="hidden md:block leading-relaxed">In Vedic astrology, periods like Sade Sati, Shani
+                            Dasha and other
+                            Saturn transits are a part of your life's journey.</p>
+                        <!-- Both: 2nd Para -->
+                        <p class="leading-relaxed text-sm lg:text-base">They are not meant to be feared, but understood.
+                            Through traditional
+                            remedies, you can seek Saturn's blessings and navigate this phase with greater strength,
+                            clarity, and stability.</p>
+                    </div>
+
+                    <!-- Expert Perspective Card -->
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-purple-100 relative group hover:shadow-[0_8px_30px_rgba(107,33,168,0.08)] transition-shadow">
+                        <!-- Accent Line -->
+                        <div class="absolute left-0 top-6 bottom-6 w-1 bg-purple-400 rounded-r-md"></div>
+
+                        <h3 class="font-bold text-[#3D2C5A] text-lg mb-3 flex items-center gap-2">
+                            <div class="p-1.5 bg-purple-50 rounded-full text-purple-600">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            The Expert Perspective
+                        </h3>
+                        <p class="text-sm text-gray-600 mb-3 leading-relaxed">Shani is associated with karma, discipline
+                            and long-term growth. When Saturn feels challenging, traditional practices such as Shani
+                            worship, Archana and mantra chanting are believed to help pacify its intensity.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">A Saturn Yantra is used as sacred support to
+                            encourage balance, protection and stability.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REMEDIES (CHOOSE THE REMEDY THAT FITS YOUR NEEDS) -->
+    <section id="remedies" class="py-20 bg-cream relative overflow-hidden">
+
+        <div class="container mx-auto px-4 max-w-7xl relative z-10">
+            <div class="text-center mb-16 animate-on-scroll fade-up">
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-royal">
+                    Choose the Remedy That Fits Your Needs
+                </h2>
+                <div class="w-24 h-1 bg-green mx-auto my-3 rounded-full"></div>
+                <p class="text-text-muted max-w-2xl mx-auto text-lg">Select the right authentic Vedic solution based on
+                    how you would like to participate in the rituals.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Card 1 (Most Popular) -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border-2 border-green shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative animate-on-scroll fade-up delay-100">
+
+                    <div
+                        class="absolute top-5 right-5 bg-green text-white text-[10px] font-bold px-3 py-1.5 rounded-full uppercase tracking-wider z-20 shadow-sm">
+                        Most Popular
+                    </div>
+
+                    <div class="h-48 p-2 sm:p-3 relative overflow-hidden">
+                        <img src="assets/images/remedies/daily_new.jpg"
+                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            alt="Daily Shani Sponsorship">
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col relative z-20">
+                        <h3 class="font-serif font-bold text-royal text-xl mb-1">Daily Shani Sponsorship</h3>
+                        <div class="text-royal font-black text-3xl mb-6 flex items-baseline gap-1">₹108</div>
+
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-text-main">
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Daily Archana to Shani</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Saturn Moola Mantra chanting</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Weekly special worship</li>
+                        </ul>
+
+                        <button
+                            class="w-full relative overflow-hidden bg-green text-white font-bold py-3.5 rounded-xl transition-colors duration-300 hover:bg-green-700 shadow-sm cursor-pointer">
+                            Start Now &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative animate-on-scroll fade-up delay-200">
+                    <div class="h-48 p-2 sm:p-3 relative overflow-hidden">
+                        <img src="assets/images/remedies/pooja_new.jpg"
+                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            alt="7 Days Shani Pooja">
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col relative z-20">
+                        <div class="text-[10px] text-royal/60 font-bold uppercase tracking-widest mb-1">Focused Worship
+                        </div>
+                        <h3 class="font-serif font-bold text-royal text-xl mb-1">7 Days Shani Pooja</h3>
+                        <div class="text-royal font-black text-3xl mb-6 flex items-baseline gap-1">₹525</div>
+
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-text-main">
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span> 7
+                                days of Shani worship</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Focused prayers and rituals</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span> Seek
+                                strength and discipline</li>
+                        </ul>
+
+                        <button
+                            class="w-full relative overflow-hidden bg-green text-white font-bold py-3.5 rounded-xl transition-colors duration-300 hover:bg-green-700 shadow-sm cursor-pointer">
+                            7-Day Pooja &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative animate-on-scroll fade-up delay-300">
+                    <div class="h-48 p-2 sm:p-3 relative overflow-hidden">
+                        <img src="assets/images/remedies/archana_new.jpg"
+                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            alt="Monthly Shani Sponsorship">
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col relative z-20">
+                        <div class="text-[10px] text-royal/60 font-bold uppercase tracking-widest mb-1">Continuing
+                            Worship</div>
+                        <h3 class="font-serif font-bold text-royal text-xl mb-1">Monthly Sponsorship</h3>
+                        <div class="text-royal font-black text-3xl mb-6 flex items-baseline gap-1">₹3,501</div>
+
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-text-main">
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Daily Archana for 30 days</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Moola Mantra chanting</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Weekly special Pooja</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Monthly group Homa</li>
+                        </ul>
+
+                        <button
+                            class="w-full relative overflow-hidden bg-green text-white font-bold py-3.5 rounded-xl transition-colors duration-300 hover:bg-green-700 shadow-sm cursor-pointer">
+                            Monthly Pooja &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col relative animate-on-scroll fade-up delay-400">
+                    <div class="h-48 p-2 sm:p-3 relative overflow-hidden">
+                        <img src="assets/images/remedies/yantra_new.jpg"
+                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            alt="Saturn Yantra">
+                    </div>
+
+                    <div class="p-6 flex-grow flex flex-col relative z-20">
+                        <div class="text-[10px] text-royal/60 font-bold uppercase tracking-widest mb-1">Physical Product
+                        </div>
+                        <h3 class="font-serif font-bold text-royal text-xl mb-1">Saturn Yantra</h3>
+                        <div class="text-royal font-black text-3xl mb-6 flex items-baseline gap-1">₹1,275</div>
+
+                        <ul class="space-y-3 mb-8 flex-grow text-sm text-text-main">
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Energized Yantra</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span>
+                                Traditional design</li>
+                            <li class="flex items-start gap-3"><span class="text-green shrink-0 font-bold">✓</span> For
+                                home or office</li>
+                        </ul>
+
+                        <button
+                            class="w-full relative overflow-hidden bg-green text-white font-bold py-3.5 rounded-xl transition-colors duration-300 hover:bg-green-700 shadow-sm cursor-pointer">
+                            View Yantra &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="py-6 bg-purple-100 border-b border-purple-200">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-8 animate-on-scroll fade-up">
+                <h2 class="font-serif text-4xl font-bold text-royal">How It Works</h2>
+                <div class="w-24 h-1 bg-green mx-auto my-3 rounded-full"></div>
+                <p class="text-text-muted text-lg">A simple and secure process to begin your Shani remedy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl border border-gray-100 animate-on-scroll fade-up">
+                    <div
+                        class="absolute -right-4 -top-8 text-[140px] font-black text-gray-50 group-hover:text-green/5 transition-colors duration-500 pointer-events-none select-none">
+                        1</div>
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-50 text-royal flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-green group-hover:text-white transition-all duration-500 shadow-inner">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="font-bold text-royal text-xl mb-3 relative z-10 group-hover:text-green transition-colors">
+                        1. Choose Remedy</h3>
+                    <p class="text-text-muted text-sm leading-relaxed relative z-10">Select the option that best suits
+                        your requirements.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl border border-gray-100 animate-on-scroll fade-up delay-100">
+                    <div
+                        class="absolute -right-4 -top-8 text-[140px] font-black text-gray-50 group-hover:text-green/5 transition-colors duration-500 pointer-events-none select-none">
+                        2</div>
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-50 text-royal flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-green group-hover:text-white transition-all duration-500 shadow-inner">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="font-bold text-royal text-xl mb-3 relative z-10 group-hover:text-green transition-colors">
+                        2. Share Details</h3>
+                    <p class="text-text-muted text-sm leading-relaxed relative z-10">Provide the required information
+                        for the ritual.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl border border-gray-100 animate-on-scroll fade-up delay-200">
+                    <div
+                        class="absolute -right-4 -top-8 text-[140px] font-black text-gray-50 group-hover:text-green/5 transition-colors duration-500 pointer-events-none select-none">
+                        3</div>
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-50 text-royal flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-green group-hover:text-white transition-all duration-500 shadow-inner">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="font-bold text-royal text-xl mb-3 relative z-10 group-hover:text-green transition-colors">
+                        3. Priests Perform</h3>
+                    <p class="text-text-muted text-sm leading-relaxed relative z-10">Rituals are performed as per
+                        ancient tradition.</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-3xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-sm hover:shadow-xl border border-gray-100 animate-on-scroll fade-up delay-300">
+                    <div
+                        class="absolute -right-4 -top-8 text-[140px] font-black text-gray-50 group-hover:text-green/5 transition-colors duration-500 pointer-events-none select-none">
+                        4</div>
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-50 text-royal flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-green group-hover:text-white transition-all duration-500 shadow-inner">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <h3
+                        class="font-bold text-royal text-xl mb-3 relative z-10 group-hover:text-green transition-colors">
+                        4. Receive Updates</h3>
+                    <p class="text-text-muted text-sm leading-relaxed relative z-10">Get full confirmation and updates
+                        as applicable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ASTROVED? -->
+    <section class="py-16 border-b border-gray-100">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <h2 class="font-serif text-3xl font-bold text-royal mb-4">Why Choose AstroVed?</h2>
+                <div class="w-24 h-1 bg-green mx-auto rounded-full my-3"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-blue-50 text-royal flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">25+
+                        Years<br>of Experience</span>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-blue-50 text-royal flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">Experienced<br>Vedic
+                        Priests</span>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-300">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-orange-50 text-orange flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">Traditional<br>Rituals
+                        & Procedures</span>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-blue-50 text-royal flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">Personalized<br>Participation</span>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-red-50 text-red-500 flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">Secure<br>Online
+                        Booking</span>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)] hover:border-green-300 hover:-translate-y-1 transition-all duration-300 group flex flex-col items-center text-center animate-on-scroll fade-up delay-300">
+                    <div
+                        class="w-14 h-14 mb-4 rounded-xl bg-blue-50 text-royal flex items-center justify-center group-hover:bg-green group-hover:text-white transition-colors duration-300 shadow-inner">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <span
+                        class="text-sm font-bold text-royal group-hover:text-green transition-colors leading-snug">Serving
+                        Devotees<br>Worldwide</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL EXPERIENCES FROM OUR DEVOTEES -->
+    <section class="py-16 bg-purple-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-10 animate-on-scroll fade-up">
+                <h2 class="font-serif text-3xl font-bold text-royal">Real Experiences From Our Devotees</h2>
+                <div class="w-24 h-1 bg-green mx-auto my-3 rounded-full"></div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="relative w-full">
+                <!-- Left Button -->
+                <button id="testimonial-prev" aria-label="Previous testimonial"
+                    class="hidden md:flex absolute left-0 lg:-left-6 xl:-left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#0B061A] border border-purple-800/60 text-white items-center justify-center hover:bg-purple-900 transition-colors shadow-lg z-20 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Right Button -->
+                <button id="testimonial-next" aria-label="Next testimonial"
+                    class="hidden md:flex absolute right-0 lg:-right-6 xl:-right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#0B061A] border border-purple-800/60 text-white items-center justify-center hover:bg-purple-900 transition-colors shadow-lg z-20 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+
+                <!-- Carousel Container -->
+                <div class="relative w-full overflow-x-auto overflow-y-hidden flex pb-4 snap-x snap-mandatory"
+                    id="testimonial-carousel" style="scrollbar-width: none; -ms-overflow-style: none;">
+
+                    <style>
+                        #testimonial-carousel::-webkit-scrollbar {
+                            display: none;
+                        }
+                    </style>
+
+                    <!-- Card 1 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"I started the
+                                daily Shani worship during my Sade Sati. The process was simple and well organized."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    A</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Arjun K.</h4>
+                                    <span class="text-[13px] text-royal/80">Bengaluru</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"The 7-day
+                                pooja
+                                gave me a sense of calm and clarity. I'm glad I could participate."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    P</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Priya S.</h4>
+                                    <span class="text-[13px] text-royal/80">Chennai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"I chose the
+                                monthly worship for continued support. The updates were helpful."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    R</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Rahul M.</h4>
+                                    <span class="text-[13px] text-royal/80">Hyderabad</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"I was facing
+                                immense financial blockages. Since starting the daily archana, I've seen unexpected
+                                doors
+                                open up in my business. Truly blessed."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    S</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Sneha V.</h4>
+                                    <span class="text-[13px] text-royal/80">Mumbai</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"My health took
+                                a
+                                huge toll during Shani Dasha. The 7-day Pooja gave me an incredible sense of inner
+                                strength
+                                and my recovery has been remarkable."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    V</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Vikram T.</h4>
+                                    <span class="text-[13px] text-royal/80">Delhi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="w-[85%] sm:w-[90%] md:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                        <div
+                            class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col h-full w-full">
+                            <span class="text-green text-6xl font-serif leading-[0.5] mt-4 mb-2">“</span>
+                            <p class="text-[15px] text-royal font-medium mb-8 flex-grow leading-relaxed">"I was
+                                skeptical at
+                                first, but the ongoing monthly support and regular updates brought a profound sense of
+                                peace
+                                to my family."</p>
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-royal text-white flex items-center justify-center font-bold text-lg mr-4 shrink-0">
+                                    D</div>
+                                <div>
+                                    <h4 class="font-bold text-royal text-[15px]">Divya M.</h4>
+                                    <span class="text-[13px] text-royal/80">Pune</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="flex justify-center items-center gap-2 mt-8" id="testimonial-dots">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = document.getElementById('testimonial-carousel');
+            const dotsContainer = document.getElementById('testimonial-dots');
+            const prevBtn = document.getElementById('testimonial-prev');
+            const nextBtn = document.getElementById('testimonial-next');
+            if (!carousel || !dotsContainer) return;
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    if (carousel.scrollLeft <= 10) {
+                        carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+                    }
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                    if (carousel.scrollLeft >= maxScroll - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                    }
+                });
+            }
+
+            let autoScrollInterval;
+            let numDots = 0;
+
+            function initCarousel() {
+                dotsContainer.innerHTML = '';
+                const itemsPerView = window.innerWidth >= 1024 ? 3 : (window.innerWidth >= 768 ? 2 : 1);
+                // Calculate dots based on total cards (6) and items per view
+                numDots = Math.ceil(6 / itemsPerView);
+
+                for (let i = 0; i < numDots; i++) {
+                    const btn = document.createElement('button');
+                    btn.className = 'w-2.5 h-2.5 rounded-full bg-purple-300 transition-all duration-300';
+                    btn.ariaLabel = `Go to slide ${i + 1}`;
+                    btn.addEventListener('click', () => {
+                        const targetScroll = i * carousel.clientWidth;
+                        carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                    });
+                    dotsContainer.appendChild(btn);
+                }
+                updateDots();
+            }
+
+            function updateDots() {
+                if (numDots === 0) return;
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                let activeIndex = 0;
+
+                if (maxScroll > 0) {
+                    const progress = carousel.scrollLeft / maxScroll;
+                    activeIndex = Math.round(progress * (numDots - 1));
+                }
+
+                const dots = dotsContainer.querySelectorAll('button');
+                dots.forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.className = 'w-8 h-2.5 rounded-full bg-green transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2.5 h-2.5 rounded-full bg-purple-300 transition-all duration-300';
+                    }
+                });
+            }
+
+            carousel.addEventListener('scroll', updateDots);
+            window.addEventListener('resize', initCarousel);
+
+            // Initial setup
+            initCarousel();
+
+            function startAutoScroll() {
+                autoScrollInterval = setInterval(() => {
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+                    // If at the end, scroll back to 0. Otherwise slide a full page (clientWidth).
+                    if (carousel.scrollLeft >= maxScroll - 10) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+                    }
+                }, 5000);
+            }
+
+            startAutoScroll();
+
+            carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+            carousel.addEventListener('mouseleave', startAutoScroll);
+
+            // Make dots clickable
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                    const targetScroll = (index / (dots.length - 1)) * maxScroll;
+                    carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                });
+            });
+        });
+
+        // Auto-scroll for Problems Carousel (Mobile only)
+        document.addEventListener('DOMContentLoaded', () => {
+            const problemsCarousel = document.getElementById('problems-carousel');
+            if (!problemsCarousel) return;
+
+            let problemsScrollInterval;
+            
+            function startProblemsAutoScroll() {
+                clearInterval(problemsScrollInterval);
+                problemsScrollInterval = setInterval(() => {
+                    // Only auto-scroll on mobile screens
+                    if (window.innerWidth < 640 && problemsCarousel.scrollWidth > problemsCarousel.clientWidth) {
+                        const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
+                        
+                        if (problemsCarousel.scrollLeft >= maxScroll - 10) {
+                            problemsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            // Scroll by roughly the width of one card (85% of screen width)
+                            problemsCarousel.scrollBy({ left: problemsCarousel.clientWidth * 0.85, behavior: 'smooth' });
+                        }
+                    }
+                }, 3500); // swipe every 3.5 seconds
+            }
+            
+            startProblemsAutoScroll();
+            
+            // Pause auto-scroll when user interacts
+            problemsCarousel.addEventListener('touchstart', () => clearInterval(problemsScrollInterval), {passive: true});
+            problemsCarousel.addEventListener('touchend', startProblemsAutoScroll);
+        });
+    </script>
+
+    <!-- QUESTIONS ABOUT SHANI REMEDIES (FAQ) -->
+    <section class="py-16 border-t border-purple-100">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="text-center mb-12 animate-on-scroll fade-up">
+                <span class="text-green uppercase tracking-widest text-sm font-bold mb-3 block">FAQ</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-royal">Questions About Shani Remedies</h2>
+                <div class="w-24 h-1 bg-green mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 animate-on-scroll fade-up delay-100">
+
+                <!-- Row 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-1">
+                        <span class="transition-colors pr-4">1. Can Saturn's influence be
+                            completely removed?</span>
+                        <span class="font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-1" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">Vedic astrology suggests that while
+                            karmic influences cannot be entirely erased, participating in traditional remedies helps
+                            pacify the intensity and provides inner strength to navigate the period.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-2">
+                        <span class=" transition-colors pr-4">2. Can Sade Sati and Shani
+                            Dasha happen together?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-2" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">Yes, it is possible for the 7.5-year
+                            Sade Sati transit to overlap with the 19-year Shani Dasha period, making the influence of
+                            Saturn particularly prominent during those overlapping years.</p>
+                    </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-3">
+                        <span class=" transition-colors pr-4">3. What are traditional
+                            remedies for Saturn?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-3" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">Traditional remedies include daily
+                            Archana, Mantra chanting, Homam, and establishing a Saturn Yantra. These practices are
+                            designed to show devotion and seek discipline.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-4">
+                        <span class=" transition-colors pr-4">4. Do I need to purchase all
+                            the remedies?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-4" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">No. Selecting a single remedy
+                            performed with sincere devotion is traditionally considered more effective than
+                            participating in multiple without focus.</p>
+                    </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-5">
+                        <span class=" transition-colors pr-4">5. Which Shani remedy should I
+                            choose?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-5" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">It depends on your current situation.
+                            Daily sponsorship is great for continuous support, while a 7-day or 30-day Pooja is for more
+                            focused participation during critical phases.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-6">
+                        <span class=" transition-colors pr-4">6. Are results
+                            guaranteed?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-6" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">Vedic rituals are a matter of faith
+                            and karma. They are meant to provide spiritual support and pacify negative influences, but
+                            specific life outcomes cannot be guaranteed.</p>
+                    </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-7">
+                        <span class=" transition-colors pr-4">7. Is Shani worship only for
+                            Sade Sati?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-7" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">No. While highly recommended during
+                            Sade Sati and Shani Dasha, anyone seeking discipline, career growth, or stability can
+                            perform Shani worship at any time.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-2xl shadow-sm hover:shadow-md border border-purple-100 overflow-hidden transition-all duration-300 h-full flex flex-col">
+                    <button
+                        class="faq-button cursor-pointer w-full text-left px-6 py-5 font-semibold text-[17px] text-royal flex justify-between items-center focus:outline-none group flex-grow"
+                        aria-expanded="false" aria-controls="faq-8">
+                        <span class=" transition-colors pr-4">8. How will I receive
+                            confirmation?</span>
+                        <span class=" font-bold text-2xl transition-transform duration-300 shrink-0">+</span>
+                    </button>
+                    <div id="faq-8" class="faq-content bg-white px-6">
+                        <p class="text-gray-600 text-[15px] pb-6 leading-relaxed">You will receive an email confirmation
+                            upon successful booking, and further updates once the designated priests perform the rituals
+                            on your behalf.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+    <!-- Simple inline script to handle the new + / - icon logic since it changed slightly from rotation to text swap -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionButtons = document.querySelectorAll('.faq-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    const iconSpan = button.querySelector('span:last-child');
+
+                    accordionButtons.forEach(otherBtn => {
+                        if (otherBtn !== button) {
+                            otherBtn.setAttribute('aria-expanded', 'false');
+                            otherBtn.querySelector('span:last-child').textContent = '+';
+                        }
+                    });
+
+                    button.setAttribute('aria-expanded', !isExpanded);
+                    if (iconSpan) {
+                        iconSpan.textContent = !isExpanded ? '-' : '+';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

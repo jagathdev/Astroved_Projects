@@ -1,0 +1,100 @@
+/* custom.css */
+
+/* Core Tailwind v4 import (assumed via CDN in HTML for this project, but we can keep custom styles here) */
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden !important;
+    width: 100%;
+    position: relative;
+}
+
+/* Animations */
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.is-visible.fade-up,
+.is-visible.fade-in,
+.is-visible.scale-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Delay modifiers for staggered animations */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .fade-up,
+    .fade-in,
+    .scale-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* iOS Safe Area Handling */
+.safe-pb {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Custom Gradients/Backgrounds not easily achievable with Tailwind utilities alone if needed */
+.bg-cosmic {
+    background: linear-gradient(180deg, #071A33 0%, #0B2545 100%);
+}
+
+.bg-shani-overlay {
+    background: linear-gradient(0deg, rgba(7, 26, 51, 1) 0%, rgba(7, 26, 51, 0.4) 50%, rgba(7, 26, 51, 0) 100%);
+}
+
+/* Hide scrollbar for horizontal scrolling containers */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Accordion specifics */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.faq-button[aria-expanded="true"] + .faq-content {
+    max-height: 500px; /* arbitrary large value */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
