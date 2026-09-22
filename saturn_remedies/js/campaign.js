@@ -18,9 +18,9 @@ const campaigns = {
 function initCampaign() {
     const params = new URLSearchParams(window.location.search);
     const campaignKey = params.get("utm_campaign") || "default";
-    
+
     const config = campaigns[campaignKey] || campaigns.default;
-    
+
     const heroTitle = document.getElementById("hero-title");
     const heroDesc = document.getElementById("hero-desc");
     const heroPrice = document.getElementById("hero-price");
