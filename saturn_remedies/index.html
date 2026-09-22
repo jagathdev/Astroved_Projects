@@ -205,7 +205,8 @@
             </div>
 
             <!-- 5 Cards Grid / Mobile Carousel -->
-            <div id="problems-carousel" class="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pb-4 sm:pb-0 snap-x snap-mandatory sm:snap-none"
+            <div id="problems-carousel"
+                class="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 pb-4 sm:pb-0 snap-x snap-mandatory sm:snap-none"
                 style="scrollbar-width: none;">
 
                 <!-- Card 1: Career -->
@@ -1067,16 +1068,7 @@
             startAutoScroll();
 
             carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-            carousel.addEventListener('mouseleave', startAutoScroll);
-
-            // Make dots clickable
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    const targetScroll = (index / (dots.length - 1)) * maxScroll;
-                    carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
-                });
-            });
+            // Removed undefined dots click listener
         });
 
         // Auto-scroll for Problems Carousel (Mobile only)
@@ -1085,14 +1077,14 @@
             if (!problemsCarousel) return;
 
             let problemsScrollInterval;
-            
+
             function startProblemsAutoScroll() {
                 clearInterval(problemsScrollInterval);
                 problemsScrollInterval = setInterval(() => {
                     // Only auto-scroll on mobile screens
                     if (window.innerWidth < 640 && problemsCarousel.scrollWidth > problemsCarousel.clientWidth) {
                         const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
-                        
+
                         if (problemsCarousel.scrollLeft >= maxScroll - 10) {
                             problemsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
                         } else {
@@ -1102,11 +1094,11 @@
                     }
                 }, 3500); // swipe every 3.5 seconds
             }
-            
+
             startProblemsAutoScroll();
-            
+
             // Pause auto-scroll when user interacts
-            problemsCarousel.addEventListener('touchstart', () => clearInterval(problemsScrollInterval), {passive: true});
+            problemsCarousel.addEventListener('touchstart', () => clearInterval(problemsScrollInterval), { passive: true });
             problemsCarousel.addEventListener('touchend', startProblemsAutoScroll);
         });
     </script>
@@ -1258,32 +1250,11 @@
         </div>
     </section>
 
-    <!-- Scripts -->
-    <script type="module" src="js/main.js"></script>
-    <!-- Simple inline script to handle the new + / - icon logic since it changed slightly from rotation to text swap -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordionButtons = document.querySelectorAll('.faq-button');
-            accordionButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-                    const iconSpan = button.querySelector('span:last-child');
-
-                    accordionButtons.forEach(otherBtn => {
-                        if (otherBtn !== button) {
-                            otherBtn.setAttribute('aria-expanded', 'false');
-                            otherBtn.querySelector('span:last-child').textContent = '+';
-                        }
-                    });
-
-                    button.setAttribute('aria-expanded', !isExpanded);
-                    if (iconSpan) {
-                        iconSpan.textContent = !isExpanded ? '-' : '+';
-                    }
-                });
-            });
-        });
-    </script>
+    <!-- Scripts (Loaded as standard scripts instead of module to avoid CORS on file://) -->
+    <script src="js/campaign.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

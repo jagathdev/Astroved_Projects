@@ -1,6 +1,6 @@
 // js/animations.js
 
-export function initAnimations() {
+function initAnimations() {
     // Respect prefers-reduced-motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) return;

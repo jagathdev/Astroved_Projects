@@ -1,29 +1,49 @@
 // js/faq.js
 
-export function initFAQ() {
+function initFAQ() {
     const accordionButtons = document.querySelectorAll('.faq-button');
-    
+
     accordionButtons.forEach(button => {
         button.addEventListener('click', () => {
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            
+            const iconSpan = button.querySelector('span:last-child');
+            const content = button.nextElementSibling;
+
             // Close all others
             accordionButtons.forEach(otherBtn => {
                 if (otherBtn !== button) {
                     otherBtn.setAttribute('aria-expanded', 'false');
-                    const otherIcon = otherBtn.querySelector('.faq-icon');
-                    if (otherIcon) {
-                        otherIcon.style.transform = 'rotate(0deg)';
+                    const otherIconSpan = otherBtn.querySelector('span:last-child');
+                    if (otherIconSpan) {
+                        otherIconSpan.textContent = '+';
+                    }
+                    const otherContent = otherBtn.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.maxHeight = null;
+                        otherContent.style.paddingTop = null;
+                        otherContent.style.paddingBottom = null;
                     }
                 }
             });
-            
+
             // Toggle current
-            button.setAttribute('aria-expanded', !isExpanded);
-            const icon = button.querySelector('.faq-icon');
-            if (icon) {
-                icon.style.transform = !isExpanded ? 'rotate(45deg)' : 'rotate(0deg)';
-                icon.style.transition = 'transform 0.3s ease';
+            const newState = !isExpanded;
+            button.setAttribute('aria-expanded', newState ? 'true' : 'false');
+
+            if (iconSpan) {
+                iconSpan.textContent = newState ? '-' : '+';
+            }
+
+            if (content) {
+                if (newState) {
+                    content.style.maxHeight = content.scrollHeight + 32 + "px"; // +32 for 2rem total padding
+                    content.style.paddingTop = "1rem";
+                    content.style.paddingBottom = "1rem";
+                } else {
+                    content.style.maxHeight = null;
+                    content.style.paddingTop = null;
+                    content.style.paddingBottom = null;
+                }
             }
         });
     });

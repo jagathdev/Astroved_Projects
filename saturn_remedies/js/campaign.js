@@ -15,7 +15,7 @@ const campaigns = {
     }
 };
 
-export function initCampaign() {
+function initCampaign() {
     const params = new URLSearchParams(window.location.search);
     const campaignKey = params.get("utm_campaign") || "default";
     
