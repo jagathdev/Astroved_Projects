@@ -1,27 +1,46 @@
 // js/faq.js
 
 function initFAQ() {
-    const accordionButtons = document.querySelectorAll('.faq-button');
+    const items = document.querySelectorAll('.faq-item');
 
-    accordionButtons.forEach(button => {
+    items.forEach(item => {
+        const button = item.querySelector('.faq-button');
+        const content = item.querySelector('.faq-content');
+        const icon = item.querySelector('.faq-icon');
+        const iconText = item.querySelector('.icon-text');
+
+        if(!button) return;
+
         button.addEventListener('click', () => {
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
-            const iconSpan = button.querySelector('span:last-child');
-            const content = button.nextElementSibling;
 
             // Close all others
-            accordionButtons.forEach(otherBtn => {
-                if (otherBtn !== button) {
-                    otherBtn.setAttribute('aria-expanded', 'false');
-                    const otherIconSpan = otherBtn.querySelector('span:last-child');
-                    if (otherIconSpan) {
-                        otherIconSpan.textContent = '+';
-                    }
-                    const otherContent = otherBtn.nextElementSibling;
-                    if (otherContent) {
+            items.forEach(otherItem => {
+                if (otherItem !== item) {
+                    const otherButton = otherItem.querySelector('.faq-button');
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    const otherIcon = otherItem.querySelector('.faq-icon');
+                    const otherIconText = otherItem.querySelector('.icon-text');
+
+                    if(otherButton) otherButton.setAttribute('aria-expanded', 'false');
+                    
+                    if(otherContent) {
                         otherContent.style.maxHeight = null;
-                        otherContent.style.paddingTop = null;
-                        otherContent.style.paddingBottom = null;
+                    }
+                    
+                    // Reset styling
+                    otherItem.classList.remove('border-[#E86B35]');
+                    otherItem.classList.remove('border-l-[#E86B35]');
+                    otherItem.classList.add('border-gray-200');
+                    otherItem.classList.add('border-l-transparent');
+
+                    if(otherIcon) {
+                        otherIcon.classList.remove('bg-[#CB431E]', 'text-white');
+                        otherIcon.classList.add('bg-[#FFF0E5]', 'text-[#E86B35]');
+                    }
+                    
+                    if(otherIconText) {
+                        otherIconText.textContent = '+';
                     }
                 }
             });
@@ -30,19 +49,41 @@ function initFAQ() {
             const newState = !isExpanded;
             button.setAttribute('aria-expanded', newState ? 'true' : 'false');
 
-            if (iconSpan) {
-                iconSpan.textContent = newState ? '-' : '+';
-            }
+            if (newState) {
+                // Open
+                content.style.maxHeight = content.scrollHeight + "px";
+                
+                // Add active styles
+                item.classList.add('border-[#E86B35]');
+                item.classList.add('border-l-[#E86B35]');
+                item.classList.remove('border-gray-200');
+                item.classList.remove('border-l-transparent');
 
-            if (content) {
-                if (newState) {
-                    content.style.maxHeight = content.scrollHeight + 32 + "px"; // +32 for 2rem total padding
-                    content.style.paddingTop = "1rem";
-                    content.style.paddingBottom = "1rem";
-                } else {
-                    content.style.maxHeight = null;
-                    content.style.paddingTop = null;
-                    content.style.paddingBottom = null;
+                if(icon) {
+                    icon.classList.add('bg-[#CB431E]', 'text-white');
+                    icon.classList.remove('bg-[#FFF0E5]', 'text-[#E86B35]');
+                }
+                
+                if(iconText) {
+                    iconText.textContent = '-';
+                }
+            } else {
+                // Close
+                content.style.maxHeight = null;
+                
+                // Remove active styles
+                item.classList.remove('border-[#E86B35]');
+                item.classList.remove('border-l-[#E86B35]');
+                item.classList.add('border-gray-200');
+                item.classList.add('border-l-transparent');
+
+                if(icon) {
+                    icon.classList.remove('bg-[#CB431E]', 'text-white');
+                    icon.classList.add('bg-[#FFF0E5]', 'text-[#E86B35]');
+                }
+                
+                if(iconText) {
+                    iconText.textContent = '+';
                 }
             }
         });
