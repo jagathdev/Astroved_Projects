@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1333,45 +1333,44 @@
                 return card ? card.clientWidth : 0;
             }
 
-            // Scroll by exactly half the max scroll to jump between the 3 dot states
+            // Scroll one card at a time
             if (prevBtn) {
                 prevBtn.addEventListener('click', () => {
-                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    const scrollAmount = maxScroll / 2;
                     if (carousel.scrollLeft <= 10) {
                         carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'auto' });
                     } else {
-                        carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
                     }
                 });
             }
             if (nextBtn) {
                 nextBtn.addEventListener('click', () => {
                     const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    const scrollAmount = maxScroll / 2;
                     if (carousel.scrollLeft >= maxScroll - 10) {
                         carousel.scrollTo({ left: 0, behavior: 'auto' });
                     } else {
-                        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
                     }
                 });
             }
 
             let autoScrollInterval;
-            let numDots = 3;
 
             function initCarousel() {
                 dotsContainer.innerHTML = '';
+                const cardWidth = getCardWidth();
+                if (cardWidth === 0) return;
+                
+                const numCards = carousel.querySelectorAll('.snap-start').length;
+                const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
+                const numDots = Math.ceil(numCards / visibleCards);
 
-                // Exactly 3 dots always
                 for (let i = 0; i < numDots; i++) {
                     const btn = document.createElement('button');
-                    btn.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 transition-all duration-300';
-                    btn.ariaLabel = `Go to slide ${i + 1}`;
+                    btn.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 transition-all duration-300 shrink-0';
+                    btn.ariaLabel = `Go to slide page ${i + 1}`;
                     btn.addEventListener('click', () => {
-                        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                        // Map each of the 3 dots to 0%, 50%, 100% of maxScroll
-                        const targetScroll = (maxScroll / 2) * i;
+                        const targetScroll = cardWidth * visibleCards * i;
                         carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
                     });
                     dotsContainer.appendChild(btn);
@@ -1380,40 +1379,51 @@
             }
 
             function updateDots() {
-                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                if (maxScroll <= 0) return;
+                const cardWidth = getCardWidth();
+                if (cardWidth === 0) return;
 
-                const progress = carousel.scrollLeft / maxScroll;
-                let activeIndex = Math.round(progress * 2); // 0, 1, or 2
+                const numCards = carousel.querySelectorAll('.snap-start').length;
+                const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
+                const numDots = Math.ceil(numCards / visibleCards);
+                
+                // Calculate which page is currently the most visible
+                let activeIndex = Math.round(carousel.scrollLeft / (cardWidth * visibleCards));
+                if (activeIndex < 0) activeIndex = 0;
+                if (activeIndex >= numDots) activeIndex = numDots - 1;
 
                 const dots = dotsContainer.querySelectorAll('button');
+                // Ensure correct number of dots
+                if (dots.length !== numDots) {
+                    initCarousel();
+                    return;
+                }
+
                 dots.forEach((dot, index) => {
                     if (index === activeIndex) {
-                        dot.className = 'w-6 h-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300';
+                        dot.className = 'w-6 h-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 shrink-0';
                     } else {
-                        dot.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 hover:bg-[#123B8C]/40 transition-all duration-300';
+                        dot.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 hover:bg-[#123B8C]/40 transition-all duration-300 shrink-0';
                     }
                 });
             }
 
             carousel.addEventListener('scroll', updateDots);
             window.addEventListener('resize', () => {
-                updateDots();
+                initCarousel();
             });
 
             // Initial setup
-            initCarousel();
+            // Need a small timeout to ensure layout is complete and widths are calculated
+            setTimeout(initCarousel, 100);
 
             function startAutoScroll() {
                 if (autoScrollInterval) clearInterval(autoScrollInterval);
                 autoScrollInterval = setInterval(() => {
                     const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    const scrollAmount = maxScroll / 2;
-
                     if (carousel.scrollLeft >= maxScroll - 10) {
                         carousel.scrollTo({ left: 0, behavior: 'auto' });
                     } else {
-                        carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
                     }
                 }, 5000);
             }
