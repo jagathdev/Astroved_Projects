@@ -522,7 +522,7 @@
                 problemsPrev.addEventListener('click', () => {
                     if (problemsCarousel.scrollLeft <= 10) {
                         // Loop to end
-                        problemsCarousel.scrollTo({ left: problemsCarousel.scrollWidth, behavior: 'smooth' });
+                        problemsCarousel.scrollTo({ left: problemsCarousel.scrollWidth, behavior: 'auto' });
                     } else {
                         problemsCarousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
                     }
@@ -532,7 +532,7 @@
                     const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
                     if (problemsCarousel.scrollLeft >= maxScroll - 10) {
                         // Loop to start
-                        problemsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        problemsCarousel.scrollTo({ left: 0, behavior: 'auto' });
                     } else {
                         problemsCarousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
                     }
@@ -1339,7 +1339,7 @@
                     const maxScroll = carousel.scrollWidth - carousel.clientWidth;
                     const scrollAmount = maxScroll / 2;
                     if (carousel.scrollLeft <= 10) {
-                        carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+                        carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'auto' });
                     } else {
                         carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
                     }
@@ -1350,7 +1350,7 @@
                     const maxScroll = carousel.scrollWidth - carousel.clientWidth;
                     const scrollAmount = maxScroll / 2;
                     if (carousel.scrollLeft >= maxScroll - 10) {
-                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        carousel.scrollTo({ left: 0, behavior: 'auto' });
                     } else {
                         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
                     }
@@ -1411,7 +1411,7 @@
                     const scrollAmount = maxScroll / 2;
 
                     if (carousel.scrollLeft >= maxScroll - 10) {
-                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        carousel.scrollTo({ left: 0, behavior: 'auto' });
                     } else {
                         carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
                     }
@@ -1443,7 +1443,7 @@
                         const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
 
                         if (problemsCarousel.scrollLeft >= maxScroll - 10) {
-                            problemsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                            problemsCarousel.scrollTo({ left: 0, behavior: 'auto' });
                         } else {
                             // Scroll by roughly the width of one card (85% of screen width)
                             problemsCarousel.scrollBy({ left: problemsCarousel.clientWidth * 0.85, behavior: 'smooth' });
