@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -46,7 +46,7 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden font-sans text-gray-800 antialiased bg-gray-50">
+<body class="overflow-x-clip font-sans text-gray-800 antialiased bg-gray-50">
 
     <!-- HERO SECTION (Responsive Layout) -->
     <section class="relative w-full bg-[#071A33] overflow-hidden">
@@ -66,7 +66,7 @@
 
             <!-- Left Content (Text & CTA) -->
             <div
-                class="relative w-full md:w-1/2 py-6 md:py-12 lg:py-16 flex flex-col justify-center px-6 md:px-10 lg:px-16 xl:px-20 z-20 bg-[#071A33] order-2 md:order-1">
+                class="relative w-full md:w-1/2 py-5 md:py-6 lg:py-6 flex flex-col justify-center px-6 md:px-10 lg:px-16 xl:px-20 z-20 bg-[#071A33] order-2 md:order-1">
                 <!-- Animated Background Elements -->
                 <div class="hidden md:block absolute inset-0 overflow-hidden pointer-events-none z-0">
                     <div
@@ -143,20 +143,201 @@
                 <div class="absolute inset-0 z-10 pointer-events-none"
                     style="background: radial-gradient(ellipse at center, transparent 40%, #071A33 90%);"></div>
 
-                <img src="assets/images/hero/shani_devotional_hero.jpg"
+                <img src="assets/images/saturn_hero.png"
                     class="w-full h-auto md:h-full object-cover object-[center_30%] z-0"
                     alt="Lord Saturn Devotional Remedies">
             </div>
         </div>
     </section>
 
+    <!-- STICKY SUB-NAVIGATION -->
+    <nav id="sticky-nav"
+        class="sticky top-0 z-50 bg-[#FFFDF9] border-b border-[#F0E6D2] shadow-sm transition-transform duration-300">
+        <div class="container mx-auto max-w-7xl relative group">
+
+            <!-- Mobile Scroll Buttons -->
+            <button id="nav-prev" aria-label="Scroll Left"
+                class="lg:hidden absolute left-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-r from-[#FFFDF9] via-[#FFFDF9] to-transparent flex items-center justify-start pl-2 text-[#E86B35] opacity-0 transition-opacity pointer-events-none">
+                <div
+                    class="w-6 h-6 bg-white rounded-full shadow border border-gray-100 flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </div>
+            </button>
+            <button id="nav-next" aria-label="Scroll Right"
+                class="lg:hidden absolute right-0 top-0 bottom-0 z-10 w-12 bg-gradient-to-l from-[#FFFDF9] via-[#FFFDF9] to-transparent flex items-center justify-end pr-2 text-[#E86B35] transition-opacity">
+                <div
+                    class="w-6 h-6 bg-white rounded-full shadow border border-gray-100 flex items-center justify-center">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </button>
+
+            <ul id="sticky-nav-list"
+                class="flex items-center justify-start lg:justify-between w-full gap-8 lg:gap-0 overflow-x-auto hide-scrollbar scroll-smooth px-6 lg:px-8">
+                <li><a href="#problems"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative active py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Facing Issues
+                    </a></li>
+                <li><a href="#impact"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Impact
+                    </a></li>
+                <li><a href="#remedies"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Packages
+                    </a></li>
+                <li><a href="#process"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        How It Works
+                    </a></li>
+                <li><a href="#promise"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Why AstroVed
+                    </a></li>
+                <li><a href="#reviews"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Reviews
+                    </a></li>
+                <li><a href="#faq"
+                        class="nav-link flex items-center gap-1.5 text-[#5A4A42] font-serif font-bold hover:text-[#E86B35] transition-colors whitespace-nowrap text-[15px] md:text-[16px] relative py-4 block group">
+                        <svg class="nav-icon w-4 h-4 text-[#E86B35] hidden group-[.active]:block" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        FAQs
+                    </a></li>
+            </ul>
+        </div>
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            section[id] {
+                scroll-margin-top: 70px;
+            }
+
+            #sticky-nav {
+                -webkit-overflow-scrolling: touch;
+            }
+
+            #sticky-nav .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            #sticky-nav .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            .nav-link.active {
+                color: #E86B35;
+            }
+
+            .nav-link.active::after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #E86B35;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const navList = document.getElementById('sticky-nav-list');
+                const prevBtn = document.getElementById('nav-prev');
+                const nextBtn = document.getElementById('nav-next');
+
+                if (navList && prevBtn && nextBtn) {
+                    const updateButtons = () => {
+                        if (navList.scrollLeft <= 0) {
+                            prevBtn.classList.add('opacity-0', 'pointer-events-none');
+                            prevBtn.classList.remove('opacity-100');
+                        } else {
+                            prevBtn.classList.remove('opacity-0', 'pointer-events-none');
+                            prevBtn.classList.add('opacity-100');
+                        }
+
+                        if (navList.scrollLeft >= navList.scrollWidth - navList.clientWidth - 1) {
+                            nextBtn.classList.add('opacity-0', 'pointer-events-none');
+                            nextBtn.classList.remove('opacity-100');
+                        } else {
+                            nextBtn.classList.remove('opacity-0', 'pointer-events-none');
+                            nextBtn.classList.add('opacity-100');
+                        }
+                    };
+
+                    navList.addEventListener('scroll', updateButtons);
+                    window.addEventListener('resize', updateButtons);
+
+                    // Initial check
+                    setTimeout(updateButtons, 100);
+
+                    prevBtn.addEventListener('click', () => {
+                        navList.scrollBy({ left: -200, behavior: 'smooth' });
+                    });
+
+                    nextBtn.addEventListener('click', () => {
+                        navList.scrollBy({ left: 200, behavior: 'smooth' });
+                    });
+                }
+            });
+        </script>
+    </nav>
+
     <!-- ARE YOU FACING THESE PROBLEMS? -->
-    <section class="py-16 md:py-24 bg-[#FFF9F5] relative overflow-hidden">
+    <section id="problems" class="py-8 md:py-10 bg-[#FFF9F5] relative overflow-hidden">
         <div class="container mx-auto px-4 max-w-7xl relative z-10">
             <!-- Section Header -->
             <div class="text-center mb-12 animate-on-scroll fade-up">
-                <span class="text-[#E86B35] uppercase tracking-widest text-sm font-bold mb-3 block">Challenges</span>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-[#123B8C] mb-2 md:mb-4">
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[42px] font-bold text-[#123B8C] mb-2 md:mb-4">
                     Does This Sound Familiar?
                 </h2>
                 <p class="text-gray-600 md:text-lg lg:text-xl font-medium">
@@ -166,170 +347,225 @@
             </div>
 
             <!-- 4 Cards Grid / Mobile Carousel -->
-            <div id="problems-carousel"
-                class="flex overflow-x-auto sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-4 sm:pb-0 snap-x snap-mandatory sm:snap-none hide-scrollbar animate-on-scroll fade-up delay-100">
+            <div class="relative w-full group px-0 sm:px-10 lg:px-0">
+                <!-- Left Button -->
+                <button id="problems-prev" aria-label="Previous"
+                    class="lg:hidden absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 text-[#123B8C] flex items-center justify-center hover:bg-[#F2F7FF] transition-all shadow-md z-20">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
 
-                <style>
-                    .hide-scrollbar::-webkit-scrollbar {
-                        display: none;
-                    }
+                <!-- Right Button -->
+                <button id="problems-next" aria-label="Next"
+                    class="lg:hidden absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white border border-gray-200 text-[#123B8C] flex items-center justify-center hover:bg-[#F2F7FF] transition-all shadow-md z-20">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
 
-                    .hide-scrollbar {
-                        -ms-overflow-style: none;
-                        scrollbar-width: none;
-                    }
-                </style>
+                <div id="problems-carousel"
+                    class="flex overflow-x-auto lg:grid lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 pb-4 lg:pb-0 snap-x snap-mandatory lg:snap-none hide-scrollbar animate-on-scroll fade-up delay-100">
 
-                <!-- Card 1: Career -->
-                <div
-                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
-                    <!-- Image -->
-                    <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
-                        <img src="assets/images/effects/career_v2.jpg" alt="Career Setbacks"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                        <div
-                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                    <style>
+                        .hide-scrollbar::-webkit-scrollbar {
+                            display: none;
+                        }
+
+                        .hide-scrollbar {
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
+                        }
+                    </style>
+
+                    <!-- Card 1: Career -->
+                    <div
+                        class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
+                        <!-- Image -->
+                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                            <img src="assets/images/careers-etback.png" alt="Career Setbacks"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div class="relative flex justify-center -mt-7 z-10">
+                            <div
+                                class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div class="p-6 pt-4 text-center flex-grow">
+                            <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Career Setbacks</h3>
+                            <p class="text-[14px] text-gray-600 leading-relaxed">Struggles in career growth, sudden job
+                                loss, or workplace politics.</p>
                         </div>
                     </div>
-                    <!-- Icon -->
-                    <div class="relative flex justify-center -mt-7 z-10">
-                        <div
-                            class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
+
+                    <!-- Card 2: Finance -->
+                    <div
+                        class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
+                        <!-- Image -->
+                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                            <img src="assets/images/financial-setback.png" alt="Financial Hardship"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div class="relative flex justify-center -mt-7 z-10">
+                            <div
+                                class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div class="p-6 pt-4 text-center flex-grow">
+                            <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Financial Hardship</h3>
+                            <p class="text-[14px] text-gray-600 leading-relaxed">Mounting debts, unexpected heavy
+                                expenses,
+                                and blocked wealth.</p>
                         </div>
                     </div>
-                    <!-- Text -->
-                    <div class="p-6 pt-4 text-center flex-grow">
-                        <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Career Setbacks</h3>
-                        <p class="text-[14px] text-gray-600 leading-relaxed">Struggles in career growth, sudden job
-                            loss, or workplace politics.</p>
+
+                    <!-- Card 3: Health -->
+                    <div
+                        class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
+                        <!-- Image -->
+                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                            <img src="assets/images/health&vitality.png" alt="Health Issues"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div class="relative flex justify-center -mt-7 z-10">
+                            <div
+                                class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div class="p-6 pt-4 text-center flex-grow">
+                            <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Health & Vitality</h3>
+                            <p class="text-[14px] text-gray-600 leading-relaxed">Chronic illnesses, joint pain, extreme
+                                fatigue, or lingering health issues.</p>
+                        </div>
                     </div>
+
+                    <!-- Card 4: Relationships -->
+                    <div
+                        class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
+                        <!-- Image -->
+                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                            <img src="assets/images/relationship-strain.png" alt="Relationship Strain"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                            <div
+                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                            </div>
+                        </div>
+                        <!-- Icon -->
+                        <div class="relative flex justify-center -mt-7 z-10">
+                            <div
+                                class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Text -->
+                        <div class="p-6 pt-4 text-center flex-grow">
+                            <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Relationship Strain</h3>
+                            <p class="text-[14px] text-gray-600 leading-relaxed">Misunderstandings, conflicts, and lack
+                                of
+                                harmony with loved ones.</p>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- Card 2: Finance -->
-                <div
-                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
-                    <!-- Image -->
-                    <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
-                        <img src="assets/images/effects/finance_v2.jpg" alt="Financial Hardship"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                        <div
-                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
-                        </div>
-                    </div>
-                    <!-- Icon -->
-                    <div class="relative flex justify-center -mt-7 z-10">
-                        <div
-                            class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- Text -->
-                    <div class="p-6 pt-4 text-center flex-grow">
-                        <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Financial Hardship</h3>
-                        <p class="text-[14px] text-gray-600 leading-relaxed">Mounting debts, unexpected heavy expenses,
-                            and blocked wealth.</p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Health -->
-                <div
-                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
-                    <!-- Image -->
-                    <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
-                        <img src="assets/images/effects/health_new.jpg" alt="Health Issues"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                        <div
-                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
-                        </div>
-                    </div>
-                    <!-- Icon -->
-                    <div class="relative flex justify-center -mt-7 z-10">
-                        <div
-                            class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- Text -->
-                    <div class="p-6 pt-4 text-center flex-grow">
-                        <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Health & Vitality</h3>
-                        <p class="text-[14px] text-gray-600 leading-relaxed">Chronic illnesses, joint pain, extreme
-                            fatigue, or lingering health issues.</p>
-                    </div>
-                </div>
-
-                <!-- Card 4: Relationships -->
-                <div
-                    class="bg-white w-[85%] sm:w-auto shrink-0 snap-center sm:shrink sm:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
-                    <!-- Image -->
-                    <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
-                        <img src="assets/images/effects/relationship_v2.jpg" alt="Relationship Strain"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                        <div
-                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
-                        </div>
-                    </div>
-                    <!-- Icon -->
-                    <div class="relative flex justify-center -mt-7 z-10">
-                        <div
-                            class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-white shadow-sm text-[#E86B35]">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- Text -->
-                    <div class="p-6 pt-4 text-center flex-grow">
-                        <h3 class="font-bold text-[#123B8C] mb-3 text-[17px]">Relationship Strain</h3>
-                        <p class="text-[14px] text-gray-600 leading-relaxed">Misunderstandings, conflicts, and lack of
-                            harmony with loved ones.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const problemsCarousel = document.getElementById('problems-carousel');
+            const problemsPrev = document.getElementById('problems-prev');
+            const problemsNext = document.getElementById('problems-next');
+
+            if (problemsPrev && problemsNext && problemsCarousel) {
+                const getScrollAmount = () => {
+                    // Mobile uses 85% width cards, tablet uses 50% width cards
+                    return window.innerWidth < 640 ? problemsCarousel.clientWidth * 0.85 : problemsCarousel.clientWidth * 0.5;
+                };
+
+                problemsPrev.addEventListener('click', () => {
+                    if (problemsCarousel.scrollLeft <= 10) {
+                        // Loop to end
+                        problemsCarousel.scrollTo({ left: problemsCarousel.scrollWidth, behavior: 'smooth' });
+                    } else {
+                        problemsCarousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                    }
+                });
+
+                problemsNext.addEventListener('click', () => {
+                    const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
+                    if (problemsCarousel.scrollLeft >= maxScroll - 10) {
+                        // Loop to start
+                        problemsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        problemsCarousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+                    }
+                });
+            }
+        });
+    </script>
+
     <!-- HOW SATURN'S IMPACT CAN BE REDUCED -->
-    <section class="py-16 md:py-20 bg-white relative overflow-hidden border-t border-gray-100">
+    <section id="impact" class="py-8 md:py-10 bg-white relative overflow-hidden border-t border-gray-100">
         <div class="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl relative z-10">
 
-            <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 md:gap-12 lg:gap-16">
+            <!-- Unified Title (Visible on all screens) -->
+            <div class="w-full text-left mb-8 md:mb-12 animate-on-scroll fade-up">
+                <h2
+                    class="font-serif text-3xl md:text-4xl lg:text-[42px] font-bold text-[#123B8C] leading-tight text-center">
+                    How Saturn's Impact Can Be Reduced
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mt-6 rounded-full mx-auto">
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-12 lg:gap-16">
 
                 <!-- Left Side: Image -->
-                <div class="w-full lg:w-4/12 flex justify-center lg:justify-start">
+                <div class="w-full md:w-5/12 lg:w-3/12 flex justify-center md:justify-start">
                     <div
-                        class="relative w-full max-w-md rounded-2xl shadow-xl overflow-hidden group border border-gray-100">
-                        <img src="assets/images/hero/saturn_lamp_ellu.jpg" alt="Saturn Remedies Lamp"
+                        class="relative w-full max-w-md lg:max-w-[280px] rounded-2xl shadow-xl overflow-hidden group border border-gray-100">
+                        <img src="assets/images/ellu_lamp.png" alt="Saturn Remedies Lamp"
                             class="w-full h-auto aspect-[4/3] object-cover rounded-2xl group-hover:scale-105 transition-transform duration-700">
                     </div>
                 </div>
 
                 <!-- Right Side: Content -->
-                <div class="w-full lg:w-8/12 flex flex-col justify-start text-left">
-
-                    <div class="text-left mb-8 animate-on-scroll fade-up">
-                        <span
-                            class="text-[#E86B35] uppercase tracking-widest text-sm font-bold mb-3 block">Understanding</span>
-                        <h2
-                            class="font-serif text-3xl md:text-4xl lg:text-[42px] font-bold text-[#123B8C] leading-tight">
-                            How Saturn's Impact Can Be Reduced
-                        </h2>
-                        <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mt-6 rounded-full"></div>
-                    </div>
+                <div class="w-full md:w-7/12 lg:w-9/12 flex flex-col justify-start text-left">
 
                     <div
                         class="space-y-6 text-gray-600 text-base md:text-lg font-light leading-relaxed animate-on-scroll fade-up delay-100">
@@ -374,15 +610,17 @@
     </section>
 
     <!-- REMEDIES (CHOOSE THE REMEDY THAT FITS YOUR NEEDS) -->
-    <section id="remedies" class="py-16 md:py-24 bg-cream relative overflow-hidden border-t border-slate-200">
+    <section id="remedies" class="py-8 md:py-10 bg-cream relative overflow-hidden border-t border-slate-200">
 
         <div class="container mx-auto px-4 max-w-7xl relative z-10">
             <div class="text-center mb-16 animate-on-scroll fade-up">
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-royal">
+                <h2
+                    class="font-serif text-3xl md:text-4xl lg:text-[42px] font-bold text-[#123B8C] leading-tight text-center">
                     Choose the Remedy That Fits Your Needs
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto my-6 rounded-full"></div>
-                <p class="text-text-muted max-w-2xl mx-auto text-lg">Select the right authentic Vedic solution based on
+                <p class="text-text-muted max-w-2xl mx-auto text-lg text-center">Select the right authentic Vedic
+                    solution based on
                     how you would like to participate in the rituals.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
@@ -396,7 +634,7 @@
                     </div>
 
                     <div class="h-48 p-2 sm:p-3 relative overflow-hidden mt-3 rounded-t-2xl">
-                        <img src="assets/images/remedies/daily_new.jpg"
+                        <img src="assets/images/Package1.png"
                             class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
                             alt="Daily Shani Sponsorship">
                     </div>
@@ -556,8 +794,8 @@
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="py-16 bg-[#FDF9F1] relative border-b border-gray-200 overflow-hidden">
+    <!-- HOW IT WORKS SECTION -->
+    <section id="process" class="py-8 md:py-10 bg-[#FDF9F1] relative border-b border-gray-200 overflow-hidden">
 
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -585,12 +823,18 @@
                             opacity: 0;
                         }
 
-                        10% {
+                        5% {
                             opacity: 1;
                         }
 
-                        90% {
+                        75% {
+                            left: 100%;
                             opacity: 1;
+                        }
+
+                        80% {
+                            left: 100%;
+                            opacity: 0;
                         }
 
                         100% {
@@ -598,11 +842,71 @@
                             opacity: 0;
                         }
                     }
+
+                    @keyframes moveDown {
+                        0% {
+                            top: 0;
+                            opacity: 0;
+                        }
+
+                        5% {
+                            opacity: 1;
+                        }
+
+                        75% {
+                            top: 100%;
+                            opacity: 1;
+                        }
+
+                        80% {
+                            top: 100%;
+                            opacity: 0;
+                        }
+
+                        100% {
+                            top: 100%;
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes stepGlowBg {
+
+                        0%,
+                        100% {
+                            opacity: 0;
+                        }
+
+                        5%,
+                        25% {
+                            opacity: 1;
+                        }
+
+                        40% {
+                            opacity: 0;
+                        }
+                    }
+
+                    @keyframes stepGlowText {
+
+                        0%,
+                        100% {
+                            color: #fbbf24;
+                        }
+
+                        5%,
+                        25% {
+                            color: #ffffff;
+                        }
+
+                        40% {
+                            color: #fbbf24;
+                        }
+                    }
                 </style>
 
                 <!-- Steps Container -->
                 <div
-                    class="relative grid grid-cols-2 md:flex md:flex-row items-start justify-between gap-y-10 gap-x-2 md:gap-4 w-full">
+                    class="relative flex flex-col md:flex-row items-start md:items-start justify-between gap-y-10 md:gap-4 w-full">
 
                     <!-- Continuous connecting line (desktop & tablet) -->
                     <div
@@ -612,73 +916,106 @@
                             style="animation: moveRight 4s linear infinite;"></div>
                     </div>
 
+                    <!-- Vertical connecting line (mobile timeline) -->
+                    <div
+                        class="md:hidden absolute top-[32px] bottom-[32px] left-[32px] w-[2px] bg-gradient-to-b from-amber-200 via-amber-400 to-amber-200 -translate-x-1/2 -z-10">
+                        <!-- Animated particle on the line -->
+                        <div class="absolute top-0 left-1/2 w-3 h-3 bg-amber-500 rounded-full shadow-[0_0_10px_rgba(245,166,35,0.8)] -translate-x-1/2"
+                            style="animation: moveDown 4s linear infinite;"></div>
+                    </div>
+
                     <!-- Step 1 -->
                     <div
-                        class="group flex flex-col items-center text-center relative flex-1 animate-on-scroll fade-up delay-100">
-                        <div
-                            class="w-20 h-20 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-white flex items-center justify-center text-3xl font-bold border-4 border-white shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500 relative z-10 overflow-hidden">
-                            <span class="relative z-10">1</span>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        class="group flex flex-row md:flex-col items-center md:items-center text-left md:text-center relative flex-1 animate-on-scroll fade-up delay-100">
+                        <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-amber-400 flex items-center justify-center border-4 border-white shadow-lg md:mb-4 group-hover:scale-110 group-hover:text-white transition-all duration-500 relative z-10 overflow-hidden"
+                            style="animation: stepGlowText 4s infinite 0s;">
+                            <svg class="w-6 h-6 md:w-8 md:h-8 relative z-10" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                                </path>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style="animation: stepGlowBg 4s infinite 0s;">
                             </div>
                         </div>
-                        <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Choose Remedy</h4>
-                        <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">Select
-                            the option that suits you best.</p>
+                        <div class="ml-5 md:ml-0 md:mt-2">
+                            <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Choose Remedy</h4>
+                            <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">
+                                Select
+                                the option that suits you best.</p>
+                        </div>
                     </div>
 
                     <!-- Step 2 -->
                     <div
-                        class="group flex flex-col items-center text-center relative flex-1 animate-on-scroll fade-up delay-200">
-                        <div
-                            class="w-20 h-20 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-white flex items-center justify-center text-3xl font-bold border-4 border-white shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500 relative z-10 overflow-hidden">
-                            <span class="relative z-10">2</span>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        class="group flex flex-row md:flex-col items-center md:items-center text-left md:text-center relative flex-1 animate-on-scroll fade-up delay-200">
+                        <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-amber-400 flex items-center justify-center border-4 border-white shadow-lg md:mb-4 group-hover:scale-110 group-hover:text-white transition-all duration-500 relative z-10 overflow-hidden"
+                            style="animation: stepGlowText 4s infinite 1s;">
+                            <svg class="w-6 h-6 md:w-8 md:h-8 relative z-10" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style="animation: stepGlowBg 4s infinite 1s;">
                             </div>
                         </div>
-                        <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Share Details</h4>
-                        <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">Provide
-                            the required information.</p>
+                        <div class="ml-5 md:ml-0 md:mt-2">
+                            <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Share Details</h4>
+                            <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">
+                                Provide
+                                the required information.</p>
+                        </div>
                     </div>
 
                     <!-- Step 3 -->
                     <div
-                        class="group flex flex-col items-center text-center relative flex-1 animate-on-scroll fade-up delay-300">
-                        <div
-                            class="w-20 h-20 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-white flex items-center justify-center text-3xl font-bold border-4 border-white shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500 relative z-10 overflow-hidden">
-                            <span class="relative z-10">3</span>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        class="group flex flex-row md:flex-col items-center md:items-center text-left md:text-center relative flex-1 animate-on-scroll fade-up delay-300">
+                        <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-amber-400 flex items-center justify-center border-4 border-white shadow-lg md:mb-4 group-hover:scale-110 group-hover:text-white transition-all duration-500 relative z-10 overflow-hidden"
+                            style="animation: stepGlowText 4s infinite 2s;">
+                            <svg class="w-6 h-6 md:w-8 md:h-8 relative z-10" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                </path>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style="animation: stepGlowBg 4s infinite 2s;">
                             </div>
                         </div>
-                        <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Priests Perform</h4>
-                        <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">Rituals
-                            are performed as per tradition.</p>
+                        <div class="ml-5 md:ml-0 md:mt-2">
+                            <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Priests Perform
+                            </h4>
+                            <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">
+                                Rituals
+                                are performed as per tradition.</p>
+                        </div>
                     </div>
 
                     <!-- Step 4 -->
                     <div
-                        class="group flex flex-col items-center text-center relative flex-1 animate-on-scroll fade-up delay-400">
-                        <div
-                            class="w-20 h-20 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-white flex items-center justify-center text-3xl font-bold border-4 border-white shadow-lg mb-4 group-hover:scale-110 transition-transform duration-500 relative z-10 overflow-hidden">
-                            <span class="relative z-10">4</span>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        class="group flex flex-row md:flex-col items-center md:items-center text-left md:text-center relative flex-1 animate-on-scroll fade-up delay-400">
+                        <div class="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-gradient-to-br from-[#123B8C] to-[#071A33] text-amber-400 flex items-center justify-center border-4 border-white shadow-lg md:mb-4 group-hover:scale-110 group-hover:text-white transition-all duration-500 relative z-10 overflow-hidden"
+                            style="animation: stepGlowText 4s infinite 3s;">
+                            <svg class="w-6 h-6 md:w-8 md:h-8 relative z-10" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                </path>
+                            </svg>
+                            <div class="absolute inset-0 bg-gradient-to-tr from-amber-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style="animation: stepGlowBg 4s infinite 3s;">
                             </div>
                         </div>
-                        <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Receive Updates</h4>
-                        <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">Get
-                            confirmation and updates.</p>
+                        <div class="ml-5 md:ml-0 md:mt-2">
+                            <h4 class="font-bold text-[#123B8C] text-base md:text-sm lg:text-lg mb-1">Receive Updates
+                            </h4>
+                            <p class="text-sm md:text-xs lg:text-sm text-[#123B8C]/70 leading-relaxed max-w-[150px]">Get
+                                confirmation and updates.</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Right Quote Section -->
-                <div
-                    class="hidden xl:flex flex-col justify-center pl-6 border-l-4 border-amber-500 ml-2 py-4 min-w-[240px] animate-on-scroll fade-up delay-500">
-                    <p class="font-serif italic text-[#123B8C] text-2xl leading-tight">Devotion<br>connects you<br>to a
-                        stronger<br>you.</p>
-                    <div class="w-12 h-1 bg-amber-500 mt-4 rounded-full"></div>
                 </div>
 
             </div>
@@ -686,91 +1023,84 @@
     </section>
 
     <!-- WHY CHOOSE ASTROVED? -->
-    <!-- WHY CHOOSE ASTROVED? -->
-    <section
-        class="py-8 bg-gradient-to-r from-[#123B8C] via-[#0D2960] to-[#071A33] relative overflow-hidden shadow-[inset_0_4px_20px_rgba(0,0,0,0.2)] border-y border-[#123B8C]">
-        <!-- Ambient Glow -->
-        <div class="absolute inset-0 opacity-10 mix-blend-overlay"
-            style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
-        </div>
-        <div
-            class="absolute top-1/2 left-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl -translate-y-1/2 opacity-50 pointer-events-none">
-        </div>
+    <section id="promise" class="py-8 md:py-10 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 max-w-6xl relative z-10">
+            <!-- Title -->
+            <div class="text-center mb-10 animate-on-scroll fade-up">
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-[42px] font-bold text-[#123B8C] mb-3">Why Choose
+                    AstroVed?</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto rounded-full"></div>
+            </div>
 
-        <div class="container mx-auto px-4 max-w-7xl relative z-10">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-                <!-- Title -->
-                <div class="text-center lg:text-left flex-shrink-0 animate-on-scroll fade-up">
-                    <h2 class="font-serif text-2xl lg:text-3xl font-bold text-white mb-2">Why Choose <br
-                            class="hidden lg:block">AstroVed?</h2>
-                    <div class="w-16 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto lg:mx-0 rounded-full">
+            <!-- Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+                <!-- Card 1 -->
+                <div
+                    class="bg-[#FFF9F5] rounded-3xl p-6 border border-orange-100 hover:shadow-[0_10px_40px_rgba(232,107,53,0.1)] hover:-translate-y-2 transition-all duration-400 flex flex-col items-center text-center group animate-on-scroll fade-up delay-100">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-orange-50 flex items-center justify-center text-amber-500 mb-4 group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
                     </div>
+                    <h3 class="text-[18px] font-bold text-[#123B8C] mb-2 group-hover:text-[#E86B35] transition-colors">
+                        25+ Years of Expertise</h3>
+                    <p class="text-gray-600 text-[14px] leading-relaxed">Trusted by millions over two decades for
+                        delivering authentic and powerful Vedic astrological remedies.</p>
                 </div>
 
-                <!-- Items -->
+                <!-- Card 2 -->
                 <div
-                    class="flex flex-col md:flex-row items-start md:items-center justify-center lg:justify-end gap-6 md:gap-8 lg:gap-12 w-fit mx-auto lg:w-full lg:mx-0">
-                    <!-- Point 1 -->
-                    <div class="flex items-center gap-4 group animate-on-scroll fade-up delay-100 w-full">
-                        <div
-                            class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-400 transition-all duration-300 shadow-lg group-hover:scale-110 flex-shrink-0">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                                </path>
-                            </svg>
-                        </div>
-                        <span class="text-white font-medium text-sm lg:text-base leading-snug text-left">25+ Years
-                            of<br><span
-                                class="font-bold text-amber-400 group-hover:text-amber-300 transition-colors">Expertise</span></span>
+                    class="bg-[#FFF9F5] rounded-3xl p-6 border border-orange-100 hover:shadow-[0_10px_40px_rgba(232,107,53,0.1)] hover:-translate-y-2 transition-all duration-400 flex flex-col items-center text-center group animate-on-scroll fade-up delay-200">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-orange-50 flex items-center justify-center text-amber-500 mb-4 group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:text-white transition-all duration-500 transform group-hover:-rotate-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
                     </div>
+                    <h3 class="text-[18px] font-bold text-[#123B8C] mb-2 group-hover:text-[#E86B35] transition-colors">
+                        Traditional Rituals</h3>
+                    <p class="text-gray-600 text-[14px] leading-relaxed">Performed by highly trained Vedic priests
+                        exactly as prescribed in ancient scriptures for maximum benefit.</p>
+                </div>
 
-                    <!-- Point 2 -->
-                    <div class="flex items-center gap-4 group animate-on-scroll fade-up delay-200 w-full">
-                        <div
-                            class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-400 transition-all duration-300 shadow-lg group-hover:scale-110 flex-shrink-0">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                                </path>
-                            </svg>
-                        </div>
-                        <span class="text-white font-medium text-sm lg:text-base leading-snug text-left">Vedic Priests
-                            &<br><span
-                                class="font-bold text-amber-400 group-hover:text-amber-300 transition-colors">Traditional
-                                Rituals</span></span>
+                <!-- Card 3 -->
+                <div
+                    class="bg-[#FFF9F5] rounded-3xl p-6 border border-orange-100 hover:shadow-[0_10px_40px_rgba(232,107,53,0.1)] hover:-translate-y-2 transition-all duration-400 flex flex-col items-center text-center group animate-on-scroll fade-up delay-300">
+                    <div
+                        class="w-16 h-16 rounded-full bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-orange-50 flex items-center justify-center text-amber-500 mb-4 group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-orange-500 group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
                     </div>
-
-                    <!-- Point 3 -->
-                    <div class="flex items-center gap-4 group animate-on-scroll fade-up delay-300 w-full">
-                        <div
-                            class="w-14 h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-amber-400 group-hover:bg-amber-500 group-hover:text-white group-hover:border-amber-400 transition-all duration-300 shadow-lg group-hover:scale-110 flex-shrink-0">
-                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
-                                </path>
-                            </svg>
-                        </div>
-                        <span class="text-white font-medium text-sm lg:text-base leading-snug text-left">Online
-                            Booking<br><span
-                                class="font-bold text-amber-400 group-hover:text-amber-300 transition-colors">Worldwide</span></span>
-                    </div>
+                    <h3 class="text-xl font-bold text-[#123B8C] mb-3 group-hover:text-[#E86B35] transition-colors">
+                        Worldwide Access</h3>
+                    <p class="text-gray-600 text-[15px] leading-relaxed">Easy online booking allows you to participate
+                        and receive the blessings of rituals from anywhere in the world.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- REAL EXPERIENCES FROM OUR DEVOTEES -->
-    <section class="pt-8 pb-16 bg-white border-t border-gray-100">
+    <section id="reviews" class="py-8 md:py-10 bg-white border-t border-gray-100">
         <div class="container mx-auto px-4 max-w-7xl">
             <div class="text-center mb-6 animate-on-scroll fade-up">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-[#123B8C] mb-2">Real Experiences From Our
                     Devotees</h2>
+
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-4 rounded-full"></div>
             </div>
 
-            <div class="flex flex-col xl:flex-row gap-6 items-center">
+            <div class="flex justify-center items-center w-full">
                 <!-- Carousel Section -->
-                <div class="w-full xl:w-3/4 relative flex flex-col">
+                <div class="w-full relative flex flex-col">
 
                     <div class="relative w-full group px-2 sm:px-4 lg:px-0">
                         <!-- Left Button -->
@@ -807,7 +1137,7 @@
                             </style>
 
                             <!-- Card 1 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -828,7 +1158,7 @@
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -849,7 +1179,7 @@
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -871,7 +1201,7 @@
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -892,7 +1222,7 @@
                             </div>
 
                             <!-- Card 5 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -914,7 +1244,7 @@
                             </div>
 
                             <!-- Card 6 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -936,7 +1266,7 @@
                             </div>
 
                             <!-- Card 7 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -957,7 +1287,7 @@
                             </div>
 
                             <!-- Card 8 -->
-                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-center">
+                            <div class="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3 flex snap-start">
                                 <div
                                     class="bg-white p-6 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col h-full w-full transform transition-all hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                                     <span class="text-amber-400 text-5xl font-serif leading-none mb-2">"</span>
@@ -975,7 +1305,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
@@ -985,17 +1314,6 @@
 
                 </div>
 
-                <!-- Right Side Quote -->
-                <div
-                    class="hidden xl:flex w-full xl:w-1/4 flex-col items-center xl:items-start justify-center px-4 xl:px-0 mt-6 xl:mt-0">
-                    <div class="text-center xl:text-left py-6 xl:pl-8 xl:border-l border-[#123B8C]/10 w-full">
-                        <p class="font-serif text-2xl xl:text-3xl text-[#123B8C] italic leading-snug">Faith today.<br>A
-                            brighter<br>tomorrow.</p>
-                        <div
-                            class="w-12 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto xl:mx-0 mt-6 rounded-full">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1009,7 +1327,7 @@
             if (!carousel || !dotsContainer) return;
 
             function getCardWidth() {
-                const card = carousel.querySelector('.snap-center');
+                const card = carousel.querySelector('.snap-start');
                 return card ? card.clientWidth : 0;
             }
 
@@ -1141,11 +1459,12 @@
     </script>
 
     <!-- QUESTIONS ABOUT SHANI REMEDIES (FAQ) -->
-    <section class="py-16 bg-[#FFF9F5] border-t border-orange-100/50">
+    <section id="faq"
+        class="py-8 md:py-10 bg-gradient-to-r from-[#123B8C] via-[#0D2960] to-[#071A33] border-t border-blue-900/50">
         <div class="container mx-auto px-4 max-w-7xl">
             <div class="text-center mb-12 animate-on-scroll fade-up">
-                <span class="text-[#E86B35] uppercase tracking-widest text-sm font-bold mb-3 block">FAQ</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[#123B8C]">Questions About Shani Remedies</h2>
+                <span class="text-amber-400 uppercase tracking-widest text-sm font-bold mb-3 block">FAQ</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-gray-200">Questions About Shani Remedies</h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto mt-6 rounded-full"></div>
             </div>
 
@@ -1154,25 +1473,25 @@
 
                 <!-- Item 1 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">1. Can Saturn's influence be completely removed?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">Vedic astrology suggests that while
+                                <p class="text-gray-300 text-[15px] leading-relaxed">Vedic astrology suggests that while
                                     karmic influences cannot be entirely erased, participating in traditional remedies
                                     helps pacify the intensity and provides inner strength to navigate the period.</p>
                             </div>
@@ -1182,25 +1501,25 @@
 
                 <!-- Item 2 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">2. Can Sade Sati and Shani Dasha happen together?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">Yes, it is possible for the
+                                <p class="text-gray-300 text-[15px] leading-relaxed">Yes, it is possible for the
                                     7.5-year Sade Sati transit to overlap with the 19-year Shani Dasha period, making
                                     the influence of Saturn particularly prominent during those overlapping years.</p>
                             </div>
@@ -1210,25 +1529,25 @@
 
                 <!-- Item 3 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">3. What are traditional remedies for Saturn?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">Traditional remedies include daily
+                                <p class="text-gray-300 text-[15px] leading-relaxed">Traditional remedies include daily
                                     Archana, Mantra chanting, Homam, and establishing a Saturn Yantra. These practices
                                     are designed to show devotion and seek discipline.</p>
                             </div>
@@ -1238,25 +1557,25 @@
 
                 <!-- Item 4 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">4. Do I need to purchase all the remedies?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">No. Selecting a single remedy
+                                <p class="text-gray-300 text-[15px] leading-relaxed">No. Selecting a single remedy
                                     performed with sincere devotion is traditionally considered more effective than
                                     participating in multiple without focus.</p>
                             </div>
@@ -1266,25 +1585,25 @@
 
                 <!-- Item 5 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">5. Which Shani remedy should I choose?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">It depends on your current
+                                <p class="text-gray-300 text-[15px] leading-relaxed">It depends on your current
                                     situation. Daily sponsorship is great for continuous support, while a 7-day or
                                     30-day Pooja is for more focused participation during critical phases.</p>
                             </div>
@@ -1294,25 +1613,25 @@
 
                 <!-- Item 6 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">6. Are results guaranteed?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">Vedic rituals are a matter of faith
+                                <p class="text-gray-300 text-[15px] leading-relaxed">Vedic rituals are a matter of faith
                                     and karma. They are meant to provide spiritual support and pacify negative
                                     influences, but specific life outcomes cannot be guaranteed.</p>
                             </div>
@@ -1322,25 +1641,25 @@
 
                 <!-- Item 7 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">7. Is Shani worship only for Sade Sati?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">No. While highly recommended during
+                                <p class="text-gray-300 text-[15px] leading-relaxed">No. While highly recommended during
                                     Sade Sati and Shani Dasha, anyone seeking discipline, career growth, or stability
                                     can perform Shani worship at any time.</p>
                             </div>
@@ -1350,25 +1669,25 @@
 
                 <!-- Item 8 -->
                 <div
-                    class="faq-item self-start bg-white rounded-xl border border-gray-200 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
+                    class="faq-item self-start bg-[#ffffff0d] backdrop-blur-md rounded-xl border border-white/10 border-l-4 border-l-transparent overflow-hidden transition-all duration-300">
                     <button
-                        class="faq-button w-full text-left px-6 py-5 font-bold text-[#123B8C] flex justify-between items-center focus:outline-none"
+                        class="faq-button w-full text-left px-6 py-5 font-bold text-gray-200 flex justify-between items-center focus:outline-none hover:bg-white/5 transition-colors"
                         aria-expanded="false">
                         <span class="pr-4 text-[16px]">8. How will I receive confirmation?</span>
                         <div
-                            class="faq-icon w-8 h-8 rounded-full bg-[#FFF0E5] text-[#E86B35] flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
+                            class="faq-icon w-8 h-8 rounded-full bg-white/10 text-amber-400 flex items-center justify-center font-bold text-xl shrink-0 transition-colors">
                             <span class="icon-text transform transition-transform mb-1">+</span>
                         </div>
                     </button>
                     <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                         <div class="px-6 pb-6 pt-1">
-                            <div class="border-t border-dashed border-gray-300 pt-5 flex gap-3">
-                                <svg class="w-6 h-6 text-green-600 shrink-0 mt-0.5" viewBox="0 0 24 24"
+                            <div class="border-t border-dashed border-white/20 pt-5 flex gap-3">
+                                <svg class="w-6 h-6 text-amber-400 shrink-0 mt-0.5" viewBox="0 0 24 24"
                                     fill="currentColor">
                                     <path
                                         d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.177-7.86l-2.765-2.767L7 12.431l3.118 3.121a1 1 0 001.414 0l5.952-5.95-1.062-1.062-5.599 5.598z" />
                                 </svg>
-                                <p class="text-gray-600 text-[15px] leading-relaxed">You will receive an email
+                                <p class="text-gray-300 text-[15px] leading-relaxed">You will receive an email
                                     confirmation upon successful booking, and further updates once the designated
                                     priests perform the rituals on your behalf.</p>
                             </div>
@@ -1383,6 +1702,59 @@
     <!-- Scripts (Loaded as standard scripts instead of module to avoid CORS on file://) -->
     <script src="js/campaign.js"></script>
     <script src="js/faq.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#sticky-nav .nav-link');
+            const stickyNav = document.getElementById('sticky-nav');
+            const navList = document.querySelector('#sticky-nav ul');
+
+            // Allow horizontal scrolling of the nav tabs using the mouse wheel
+            if (navList) {
+                navList.addEventListener('wheel', (e) => {
+                    if (e.deltaY !== 0) {
+                        e.preventDefault();
+                        navList.scrollLeft += e.deltaY;
+                    }
+                });
+            }
+
+            // Remove the buggy JS click scroll entirely and rely on CSS smooth scrolling
+
+            // Intersection Observer for highlighting active link
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -60% 0px',
+                threshold: 0
+            };
+
+            const stickyNavUl = document.querySelector('#sticky-nav ul');
+
+            const observerCallback = (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === '#' + entry.target.id) {
+                                link.classList.add('active');
+                                // Safely scroll the horizontal nav without interrupting the page's vertical scroll
+                                if (stickyNavUl) {
+                                    const scrollPos = link.offsetLeft - (stickyNavUl.clientWidth / 2) + (link.clientWidth / 2);
+                                    stickyNavUl.scrollTo({ left: scrollPos, behavior: 'smooth' });
+                                }
+                            }
+                        });
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            sections.forEach(section => {
+                if (section.id) observer.observe(section);
+            });
+        });
+    </script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
 </body>
