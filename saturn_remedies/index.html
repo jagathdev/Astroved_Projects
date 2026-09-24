@@ -24,7 +24,7 @@
         }
 
         @media (min-width: 1024px) {
-            .clone {
+            #problems-carousel .clone {
                 display: none !important;
             }
         }
@@ -39,10 +39,8 @@
         <!-- Mobile Title (Visible only on mobile/tablet) -->
         <div class="block md:hidden w-full px-6 z-20 bg-[#071A33]" style="padding-top: 40px;">
             <div class="flex justify-start mb-6">
-                <a href="/">
-                    <img src="https://cdn.astroved.com/images/images-av/AstroVed-Logo.svg" alt="AstroVed Logo"
-                        class="h-6 w-auto object-contain">
-                </a>
+                <img src="https://cdn.astroved.com/images/images-av/AstroVed-Logo.svg" alt="AstroVed Logo"
+                    class="h-6 w-auto object-contain">
             </div>
             <h1 class="font-serif text-[36px] font-bold text-white leading-tight tracking-tight text-center">
                 Looking for<br>
@@ -380,11 +378,10 @@
                     <div
                         class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
                         <!-- Image -->
-                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
-                            <img src="assets/images/careers-etback.png" alt="Career Setbacks"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                            <div
-                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                        <div class="aspect-[4/3] relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                            <img src="assets/images/careers-setback.png" alt="Career Setbacks"
+                                class="w-full h-full object-cover transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-transparent transition-colors duration-300">
                             </div>
                         </div>
                         <!-- Icon -->
@@ -410,11 +407,10 @@
                     <div
                         class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
                         <!-- Image -->
-                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                        <div class="aspect-[4/3] relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                             <img src="assets/images/financial-setback.png" alt="Financial Hardship"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                            <div
-                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                                class="w-full h-full object-cover transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-transparent transition-colors duration-300">
                             </div>
                         </div>
                         <!-- Icon -->
@@ -440,11 +436,10 @@
                     <div
                         class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
                         <!-- Image -->
-                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                        <div class="aspect-[4/3] relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                             <img src="assets/images/health&vitality.png" alt="Health Issues"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                            <div
-                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                                class="w-full h-full object-cover transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-transparent transition-colors duration-300">
                             </div>
                         </div>
                         <!-- Icon -->
@@ -470,11 +465,10 @@
                     <div
                         class="bg-white w-[85%] sm:w-[calc(50%-12px)] lg:w-auto shrink-0 snap-start lg:shrink lg:snap-none rounded-2xl shadow-sm border border-[#FFE4D6] overflow-hidden group flex flex-col hover:-translate-y-2 hover:shadow-xl hover:border-[#E86B35] transition-all duration-300 ease-out">
                         <!-- Image -->
-                        <div class="aspect-[4/3] w-full relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
+                        <div class="aspect-[4/3] relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                             <img src="assets/images/relationship-strain.png" alt="Relationship Strain"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                            <div
-                                class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300">
+                                class="w-full h-full object-cover transition-transform duration-700" />
+                            <div class="absolute inset-0 bg-transparent transition-colors duration-300">
                             </div>
                         </div>
                         <!-- Icon -->
@@ -509,29 +503,87 @@
             const problemsNext = document.getElementById('problems-next');
 
             if (problemsPrev && problemsNext && problemsCarousel) {
-                const getScrollAmount = () => {
-                    // Mobile uses 85% width cards, tablet uses 50% width cards
-                    return window.innerWidth < 640 ? problemsCarousel.clientWidth * 0.85 : problemsCarousel.clientWidth * 0.5;
+                // Select only original cards
+                const originalCards = Array.from(problemsCarousel.children).filter(el =>
+                    !el.classList.contains('clone') && el.tagName !== 'STYLE'
+                );
+
+                if (originalCards.length === 0) return;
+
+                const getCardWidth = () => {
+                    const card = originalCards[0];
+                    if (!card) return 0;
+                    if (originalCards.length > 1) {
+                        return originalCards[1].offsetLeft - originalCards[0].offsetLeft;
+                    }
+                    return card.offsetWidth;
                 };
 
-                problemsPrev.addEventListener('click', () => {
-                    if (problemsCarousel.scrollLeft <= 10) {
-                        // Loop to end
-                        problemsCarousel.scrollTo({ left: problemsCarousel.scrollWidth, behavior: 'auto' });
-                    } else {
-                        problemsCarousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+                // Clone elements if not already cloned
+                if (problemsCarousel.querySelectorAll('.clone').length === 0) {
+                    originalCards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        clone.classList.add('clone');
+                        clone.setAttribute('aria-hidden', 'true');
+                        problemsCarousel.appendChild(clone);
+                    });
+                    for (let i = originalCards.length - 1; i >= 0; i--) {
+                        const clone = originalCards[i].cloneNode(true);
+                        clone.classList.add('clone');
+                        clone.setAttribute('aria-hidden', 'true');
+                        problemsCarousel.insertBefore(clone, problemsCarousel.firstChild);
                     }
+                    setTimeout(() => {
+                        problemsCarousel.scrollTo({ left: getCardWidth() * originalCards.length, behavior: 'auto' });
+                    }, 50);
+                }
+
+                problemsPrev.addEventListener('click', () => {
+                    problemsCarousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
                 });
 
                 problemsNext.addEventListener('click', () => {
-                    const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
-                    if (problemsCarousel.scrollLeft >= maxScroll - 10) {
-                        // Loop to start
-                        problemsCarousel.scrollTo({ left: 0, behavior: 'auto' });
-                    } else {
-                        problemsCarousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-                    }
+                    problemsCarousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
                 });
+
+                // Debounce scroll for infinite loop jump to avoid breaking touch swipe
+                let scrollTimeout;
+                problemsCarousel.addEventListener('scroll', () => {
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        // Only run infinite loop logic on mobile (when clones are actually visible)
+                        if (window.innerWidth >= 1024) return;
+
+                        const cardWidth = getCardWidth();
+                        if (cardWidth === 0) return;
+                        const numCards = originalCards.length;
+                        const maxRealScroll = cardWidth * numCards * 2;
+
+                        // Buffer to trigger jump when entirely in cloned area
+                        if (problemsCarousel.scrollLeft >= maxRealScroll - 10) {
+                            problemsCarousel.scrollTo({ left: problemsCarousel.scrollLeft - (cardWidth * numCards), behavior: 'auto' });
+                        } else if (problemsCarousel.scrollLeft <= (cardWidth * 0.5)) {
+                            problemsCarousel.scrollTo({ left: problemsCarousel.scrollLeft + (cardWidth * numCards), behavior: 'auto' });
+                        }
+                    }, 50);
+                }, { passive: true });
+
+                let autoScrollInterval;
+                function startAutoScroll() {
+                    if (autoScrollInterval) clearInterval(autoScrollInterval);
+                    autoScrollInterval = setInterval(() => {
+                        if (window.innerWidth < 1024) {
+                            problemsCarousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+                        }
+                    }, 5000);
+                }
+
+                startAutoScroll();
+
+                problemsCarousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+                problemsCarousel.addEventListener('mouseleave', startAutoScroll);
+                problemsCarousel.addEventListener('touchstart', () => clearInterval(autoScrollInterval), { passive: true });
+                problemsCarousel.addEventListener('touchend', startAutoScroll);
             }
         });
     </script>
@@ -630,9 +682,9 @@
                         Daily Support
                     </div>
 
-                    <div class="h-40 p-2 sm:p-3 relative overflow-hidden mt-3 rounded-t-2xl">
+                    <div class="h-40 relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                         <img src="assets/images/Package1.png"
-                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            class="w-full h-full object-cover transition-transform duration-700"
                             alt="Daily Shani Sponsorship">
                     </div>
 
@@ -674,9 +726,9 @@
                         Focused Worship
                     </div>
 
-                    <div class="h-40 p-2 sm:p-3 relative overflow-hidden mt-3 rounded-t-2xl">
+                    <div class="h-40 relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                         <img src="assets/images/Package-2.png"
-                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            class="w-full h-full object-cover transition-transform duration-700"
                             alt="7 Days Shani Pooja">
                     </div>
 
@@ -714,10 +766,9 @@
                         Physical Product
                     </div>
 
-                    <div class="h-40 p-2 sm:p-3 relative overflow-hidden mt-3 rounded-t-2xl">
+                    <div class="h-40 relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                         <img src="assets/images/Package-3.png"
-                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
-                            alt="Saturn Yantra">
+                            class="w-full h-full object-cover transition-transform duration-700" alt="Saturn Yantra">
                     </div>
 
                     <div class="p-5 pt-2 flex-grow flex flex-col relative z-20 text-center">
@@ -755,9 +806,9 @@
                         Continuing Worship
                     </div>
 
-                    <div class="h-40 p-2 sm:p-3 relative overflow-hidden mt-3 rounded-t-2xl">
+                    <div class="h-40 relative overflow-hidden bg-orange-50 m-1.5 rounded-[12px]">
                         <img src="assets/images/Package-4.png"
-                            class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700 shadow-sm"
+                            class="w-full h-full object-cover transition-transform duration-700"
                             alt="Monthly Shani Sponsorship">
                     </div>
 
@@ -1306,8 +1357,8 @@
                     </div>
 
                     <!-- Navigation Dots Centered Below -->
-                    <div class="flex justify-center items-center gap-2 mt-4" id="testimonial-dots">
-                    </div>
+                    <!-- <div class="flex justify-center items-center gap-2 mt-4" id="testimonial-dots">
+                    </div> -->
 
                 </div>
 
@@ -1364,12 +1415,18 @@
 
                 if (prevBtn) {
                     prevBtn.addEventListener('click', () => {
-                        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+                        const cardWidth = getCardWidth();
+                        if (cardWidth === 0) return;
+                        const targetLeft = Math.round(carousel.scrollLeft / cardWidth) * cardWidth - cardWidth;
+                        carousel.scrollTo({ left: targetLeft, behavior: 'smooth' });
                     });
                 }
                 if (nextBtn) {
                     nextBtn.addEventListener('click', () => {
-                        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+                        const cardWidth = getCardWidth();
+                        if (cardWidth === 0) return;
+                        const targetLeft = Math.round(carousel.scrollLeft / cardWidth) * cardWidth + cardWidth;
+                        carousel.scrollTo({ left: targetLeft, behavior: 'smooth' });
                     });
                 }
 
