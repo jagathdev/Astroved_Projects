@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -1297,151 +1297,160 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const carousel = document.getElementById('testimonial-carousel');
-            const dotsContainer = document.getElementById('testimonial-dots');
-            const prevBtn = document.getElementById('testimonial-prev');
-            const nextBtn = document.getElementById('testimonial-next');
-            if (!carousel || !dotsContainer) return;
+            // Reusable infinite carousel function
+            function setupInfiniteCarousel(carouselId, prevBtnId, nextBtnId, dotsContainerId) {
+                const carousel = document.getElementById(carouselId);
+                if (!carousel) return;
 
-            function getCardWidth() {
-                const card = carousel.querySelector('.snap-start');
-                return card ? card.clientWidth : 0;
-            }
+                const dotsContainer = dotsContainerId ? document.getElementById(dotsContainerId) : null;
+                const prevBtn = prevBtnId ? document.getElementById(prevBtnId) : null;
+                const nextBtn = nextBtnId ? document.getElementById(nextBtnId) : null;
 
-            // Scroll one card at a time
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    if (carousel.scrollLeft <= 10) {
-                        carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'auto' });
-                    } else {
-                        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+                // Select only original cards
+                const originalCards = Array.from(carousel.children).filter(el =>
+                    !el.classList.contains('clone') && el.tagName !== 'STYLE'
+                );
+
+                if (originalCards.length === 0) return;
+
+                function getCardWidth() {
+                    const card = originalCards[0];
+                    if (!card) return 0;
+                    // Account for gaps by checking the difference in offsetLeft between first and second cards if possible
+                    if (originalCards.length > 1) {
+                        return originalCards[1].offsetLeft - originalCards[0].offsetLeft;
                     }
-                });
-            }
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    if (carousel.scrollLeft >= maxScroll - 10) {
-                        carousel.scrollTo({ left: 0, behavior: 'auto' });
-                    } else {
-                        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
-                    }
-                });
-            }
+                    return card.offsetWidth;
+                }
 
-            let autoScrollInterval;
-
-            function initCarousel() {
-                dotsContainer.innerHTML = '';
-                const cardWidth = getCardWidth();
-                if (cardWidth === 0) return;
-
-                const numCards = carousel.querySelectorAll('.snap-start').length;
-                const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
-                const numDots = Math.ceil(numCards / visibleCards);
-
-                for (let i = 0; i < numDots; i++) {
-                    const btn = document.createElement('button');
-                    btn.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 transition-all duration-300 shrink-0';
-                    btn.ariaLabel = `Go to slide page ${i + 1}`;
-                    btn.addEventListener('click', () => {
-                        const targetScroll = cardWidth * visibleCards * i;
-                        carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                // Clone elements if not already cloned
+                if (carousel.querySelectorAll('.clone').length === 0) {
+                    originalCards.forEach(card => {
+                        const clone = card.cloneNode(true);
+                        clone.classList.add('clone');
+                        clone.setAttribute('aria-hidden', 'true');
+                        carousel.appendChild(clone);
                     });
-                    dotsContainer.appendChild(btn);
-                }
-                updateDots();
-            }
-
-            function updateDots() {
-                const cardWidth = getCardWidth();
-                if (cardWidth === 0) return;
-
-                const numCards = carousel.querySelectorAll('.snap-start').length;
-                const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
-                const numDots = Math.ceil(numCards / visibleCards);
-
-                // Calculate which page is currently the most visible
-                let activeIndex = Math.round(carousel.scrollLeft / (cardWidth * visibleCards));
-                if (activeIndex < 0) activeIndex = 0;
-                if (activeIndex >= numDots) activeIndex = numDots - 1;
-
-                const dots = dotsContainer.querySelectorAll('button');
-                // Ensure correct number of dots
-                if (dots.length !== numDots) {
-                    initCarousel();
-                    return;
-                }
-
-                dots.forEach((dot, index) => {
-                    if (index === activeIndex) {
-                        dot.className = 'w-6 h-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 shrink-0';
-                    } else {
-                        dot.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 hover:bg-[#123B8C]/40 transition-all duration-300 shrink-0';
+                    for (let i = originalCards.length - 1; i >= 0; i--) {
+                        const clone = originalCards[i].cloneNode(true);
+                        clone.classList.add('clone');
+                        clone.setAttribute('aria-hidden', 'true');
+                        carousel.insertBefore(clone, carousel.firstChild);
                     }
-                });
-            }
+                    setTimeout(() => {
+                        carousel.scrollTo({ left: getCardWidth() * originalCards.length, behavior: 'auto' });
+                    }, 50);
+                }
 
-            carousel.addEventListener('scroll', updateDots);
-            window.addEventListener('resize', () => {
-                initCarousel();
-            });
-
-            // Initial setup
-            // Need a small timeout to ensure layout is complete and widths are calculated
-            setTimeout(initCarousel, 100);
-
-            function startAutoScroll() {
-                if (autoScrollInterval) clearInterval(autoScrollInterval);
-                autoScrollInterval = setInterval(() => {
-                    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-                    if (carousel.scrollLeft >= maxScroll - 10) {
-                        carousel.scrollTo({ left: 0, behavior: 'auto' });
-                    } else {
+                if (prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        carousel.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+                    });
+                }
+                if (nextBtn) {
+                    nextBtn.addEventListener('click', () => {
                         carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+                    });
+                }
+
+                function initDots() {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = '';
+                    const cardWidth = getCardWidth();
+                    if (cardWidth === 0) return;
+
+                    const visibleCards = Math.max(1, Math.round(carousel.clientWidth / cardWidth));
+                    const numDots = Math.ceil(originalCards.length / visibleCards);
+
+                    for (let i = 0; i < numDots; i++) {
+                        const btn = document.createElement('button');
+                        btn.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 transition-all duration-300 shrink-0';
+                        btn.ariaLabel = `Go to slide page ${i + 1}`;
+                        btn.addEventListener('click', () => {
+                            const targetScroll = cardWidth * (originalCards.length + (visibleCards * i));
+                            carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+                        });
+                        dotsContainer.appendChild(btn);
                     }
-                }, 5000);
-            }
+                    updateDots();
+                }
 
-            startAutoScroll();
+                function updateDots() {
+                    if (!dotsContainer) return;
+                    const cardWidth = getCardWidth();
+                    if (cardWidth === 0) return;
 
-            // Pause on hover/touch, restart on leave
-            carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
-            carousel.addEventListener('mouseleave', startAutoScroll);
-            carousel.addEventListener('touchstart', () => clearInterval(autoScrollInterval), { passive: true });
-            carousel.addEventListener('touchend', startAutoScroll);
-        });
+                    const visibleCards = Math.max(1, Math.round(carousel.clientWidth / cardWidth));
+                    const numDots = Math.ceil(originalCards.length / visibleCards);
+                    const minRealScroll = cardWidth * originalCards.length;
 
+                    const normalizedScrollLeft = carousel.scrollLeft - minRealScroll;
+                    let activeIndex = Math.round(normalizedScrollLeft / (cardWidth * visibleCards));
 
-        // Auto-scroll for Problems Carousel (Mobile only)
-        document.addEventListener('DOMContentLoaded', () => {
-            const problemsCarousel = document.getElementById('problems-carousel');
-            if (!problemsCarousel) return;
+                    if (activeIndex < 0) activeIndex = 0;
+                    if (activeIndex >= numDots) activeIndex = numDots - 1;
 
-            let problemsScrollInterval;
+                    const dots = dotsContainer.querySelectorAll('button');
+                    if (dots.length !== numDots) {
+                        initDots();
+                        return;
+                    }
 
-            function startProblemsAutoScroll() {
-                clearInterval(problemsScrollInterval);
-                problemsScrollInterval = setInterval(() => {
-                    // Only auto-scroll on mobile screens
-                    if (window.innerWidth < 640 && problemsCarousel.scrollWidth > problemsCarousel.clientWidth) {
-                        const maxScroll = problemsCarousel.scrollWidth - problemsCarousel.clientWidth;
-
-                        if (problemsCarousel.scrollLeft >= maxScroll - 10) {
-                            problemsCarousel.scrollTo({ left: 0, behavior: 'auto' });
+                    dots.forEach((dot, index) => {
+                        if (index === activeIndex) {
+                            dot.className = 'w-6 h-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 transition-all duration-300 shrink-0';
                         } else {
-                            // Scroll by roughly the width of one card (85% of screen width)
-                            problemsCarousel.scrollBy({ left: problemsCarousel.clientWidth * 0.85, behavior: 'smooth' });
+                            dot.className = 'w-2 h-2 rounded-full bg-[#123B8C]/20 hover:bg-[#123B8C]/40 transition-all duration-300 shrink-0';
                         }
-                    }
-                }, 3500); // swipe every 3.5 seconds
+                    });
+                }
+
+                // Debounce scroll for infinite loop jump to avoid breaking touch swipe
+                let scrollTimeout;
+                carousel.addEventListener('scroll', () => {
+                    updateDots();
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const cardWidth = getCardWidth();
+                        if (cardWidth === 0) return;
+                        const numCards = originalCards.length;
+                        const maxRealScroll = cardWidth * numCards * 2;
+                        const minRealScroll = cardWidth * numCards;
+
+                        // Buffer to trigger jump when entirely in cloned area
+                        if (carousel.scrollLeft >= maxRealScroll - 10) {
+                            carousel.scrollTo({ left: carousel.scrollLeft - (cardWidth * numCards), behavior: 'auto' });
+                        } else if (carousel.scrollLeft <= (cardWidth * 0.5)) {
+                            carousel.scrollTo({ left: carousel.scrollLeft + (cardWidth * numCards), behavior: 'auto' });
+                        }
+                    }, 50); // Small debounce ensures finger is likely lifted and snap is done
+                }, { passive: true });
+
+                window.addEventListener('resize', () => {
+                    if (dotsContainer) initDots();
+                });
+
+                setTimeout(() => { if (dotsContainer) initDots() }, 150);
+
+                let autoScrollInterval;
+                function startAutoScroll() {
+                    if (autoScrollInterval) clearInterval(autoScrollInterval);
+                    autoScrollInterval = setInterval(() => {
+                        carousel.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+                    }, 4000);
+                }
+
+                startAutoScroll();
+
+                carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+                carousel.addEventListener('mouseleave', startAutoScroll);
+                carousel.addEventListener('touchstart', () => clearInterval(autoScrollInterval), { passive: true });
+                carousel.addEventListener('touchend', startAutoScroll);
             }
 
-            startProblemsAutoScroll();
-
-            // Pause auto-scroll when user interacts
-            problemsCarousel.addEventListener('touchstart', () => clearInterval(problemsScrollInterval), { passive: true });
-            problemsCarousel.addEventListener('touchend', startProblemsAutoScroll);
+            // Initialize both carousels with the same robust infinite logic
+            setupInfiniteCarousel('testimonial-carousel', 'testimonial-prev', 'testimonial-next', 'testimonial-dots');
+            setupInfiniteCarousel('problems-carousel', 'problems-prev', 'problems-next', null);
         });
     </script>
 
