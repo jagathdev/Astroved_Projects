@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* custom.css */
 
 /* Core Tailwind v4 import (assumed via CDN in HTML for this project, but we can keep custom styles here) */

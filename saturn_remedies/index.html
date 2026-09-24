@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,10 +8,10 @@
 
     <!-- Tailwind CSS v4 -->
     <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./dist/output.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,35 +20,10 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
         rel="stylesheet">
 
-    <style type="text/tailwindcss">
-        @theme {
-            --color-navy: #071A33;
-            --color-royal: #123B8C;
-            --color-gold: #F5A623;
-            --color-green: #059669;
-            --color-cream: #F8FAFC;
-            --color-text-main: #1E293B;
-            --color-text-muted: #475569;
-            --font-sans: 'Inter', sans-serif;
-            --font-serif: 'Playfair Display', serif;
 
-            --animate-blob: blob 7s infinite;
-            --animate-blob-delayed: blob 7s infinite 2s;
-            --animate-blob-delayed-more: blob 7s infinite 4s;
-
-            @keyframes blob {
-                0% { transform: translate(0px, 0px) scale(1); }
-                33% { transform: translate(30px, -50px) scale(1.1); }
-                66% { transform: translate(-20px, 20px) scale(0.9); }
-                100% { transform: translate(0px, 0px) scale(1); }
-            }
-        }
-    </style>
 </head>
 
 <body class="overflow-x-clip font-sans text-gray-800 antialiased bg-gray-50">
-
-    <!-- HERO SECTION (Responsive Layout) -->
     <!-- HERO SECTION (Responsive Layout) -->
     <section class="relative w-full bg-[#071A33] overflow-hidden">
 
@@ -1360,7 +1335,7 @@
                 dotsContainer.innerHTML = '';
                 const cardWidth = getCardWidth();
                 if (cardWidth === 0) return;
-                
+
                 const numCards = carousel.querySelectorAll('.snap-start').length;
                 const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
                 const numDots = Math.ceil(numCards / visibleCards);
@@ -1385,7 +1360,7 @@
                 const numCards = carousel.querySelectorAll('.snap-start').length;
                 const visibleCards = Math.round(carousel.clientWidth / cardWidth) || 1;
                 const numDots = Math.ceil(numCards / visibleCards);
-                
+
                 // Calculate which page is currently the most visible
                 let activeIndex = Math.round(carousel.scrollLeft / (cardWidth * visibleCards));
                 if (activeIndex < 0) activeIndex = 0;
@@ -1711,10 +1686,6 @@
         </div>
     </section>
 
-    <!-- Scripts (Loaded as standard scripts instead of module to avoid CORS on file://) -->
-    <script src="js/campaign.js"></script>
-    <script src="js/faq.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section[id]');
@@ -1767,7 +1738,6 @@
             });
         });
     </script>
-    <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
 </body>
 
