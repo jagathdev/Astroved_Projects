@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Saturn Remedies | AstroVed</title>
 
-    <!-- Tailwind CSS v4 -->
-    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <!-- Custom CSS -->
@@ -26,9 +24,17 @@
 <body class="overflow-x-clip font-sans text-gray-800 antialiased bg-gray-50">
     <!-- HERO SECTION (Responsive Layout) -->
     <section class="relative w-full bg-[#071A33] overflow-hidden">
+        <!-- LOGO (Top Left Corner) -->
+        <div class="absolute top-0 left-0 z-50 bg-white shadow-md p-1 rounded md:p-3 md:rounded-none md:rounded-br-2xl"
+            style="padding: 4px; border-radius: 8px;">
+            <a href="/">
+                <img src="https://cdn.astroved.com/images/images-av/AstroVed-Logo.svg" alt="AstroVed Logo"
+                    class="h-10 md:h-12 lg:h-16 w-auto object-contain">
+            </a>
+        </div>
 
         <!-- Mobile Title (Visible only on mobile/tablet) -->
-        <div class="block md:hidden w-full pt-5 px-6 text-center z-20 bg-[#071A33]">
+        <div class="block md:hidden w-full px-6 text-center z-20 bg-[#071A33]" style="padding-top: 60px;">
             <h1 class="font-serif text-[36px] font-bold text-white leading-tight tracking-tight">
                 Looking for<br>
                 <span
@@ -101,7 +107,7 @@
                                 <span>from</span>
                             </div>
                             <span
-                                class="text-orange-500 font-black text-3xl lg:text-4xl drop-shadow-md whitespace-nowrap">₹
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400 font-black text-3xl lg:text-4xl drop-shadow-md whitespace-nowrap">₹
                                 108</span>
                         </div>
                     </div>
@@ -1448,9 +1454,8 @@
                 carousel.addEventListener('touchend', startAutoScroll);
             }
 
-            // Initialize both carousels with the same robust infinite logic
+            // Initialize the testimonial carousel with robust infinite logic
             setupInfiniteCarousel('testimonial-carousel', 'testimonial-prev', 'testimonial-next', 'testimonial-dots');
-            setupInfiniteCarousel('problems-carousel', 'problems-prev', 'problems-next', null);
         });
     </script>
 
@@ -1747,6 +1752,7 @@
             });
         });
     </script>
+
     <script src="js/main.js"></script>
 </body>
 
